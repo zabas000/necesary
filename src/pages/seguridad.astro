@@ -1,0 +1,86 @@
+---
+import Layout from '../layouts/Layout.astro';
+import VolverInicio from '../components/volverInicio.astro';
+---
+<Layout title="NECESSARY">
+<div class="contenedor">
+     <h1 class="titulo">Fundamentos de la seguridad </h1>
+
+     <p>La seguridad se basa en tres principios: confidencialidad (protección de datos contra accesos no autorizados), integridad (preservación de la precisión de los datos) y disponibilidad (acceso a datos cuando sea necesario). Además, son claves la autenticación (verificación de identidad) y la autorización (definición de permisos de acceso).</p>
+
+    <h2>Amenazas y Vulnerabilidades Comunes </h2>
+    <p>Los técnicos deben conocer los principales tipos de amenazas: malware (software malicioso que daña o controla sistemas), phishing (engaño para robar datos sensibles), ataques de red (como denegación de servicio o intercepciones), y errores humanos o configuraciones inseguras que exponen sistemas.</p>
+
+    <h2>Políticas de Seguridad Básicas</h2>
+    <p>La implementación de políticas claras es esencial: contraseñas seguras, actualización de sistemas para corregir vulnerabilidades, restricción de acceso según el rol del usuario, y copias de seguridad programadas para proteger la información en caso de incidentes.</p>
+
+    <h2>Herramientas y Prácticas de Protección</h2>
+    <p>Es fundamental el uso de herramientas como antivirus y firewalls (cortafuegos) para prevenir y mitigar ataques. VPNs protegen conexiones en redes públicas, y el cifrado de datos asegura que la información confidencial sea ilegible para personas no autorizadas.</p>
+
+
+    <div style="display: flex; justify-content: center; align-items: center; height: 100vh;">
+        <iframe 
+          class="video" 
+          width="560" 
+          height="315" 
+          src="https://www.youtube.com/embed/TwacC-0rwFs?si=QcBMsOcEwk6e_E--" 
+          title="YouTube video player" 
+          frameborder="0" 
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+          referrerpolicy="strict-origin-when-cross-origin" 
+          allowfullscreen>
+        </iframe>
+      </div>
+
+    
+</div>
+    <VolverInicio />
+    </Layout>
+    
+    <style>
+.video-container {
+  width: 100%;
+  max-width: 900px; /* Limitar el ancho máximo del video */
+  aspect-ratio: 16 / 9; /* Mantener la proporción del video */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+/* Estilo para el iframe */
+.video {
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+
+
+        h2{
+        color:#14ff72cb;
+        font-size: 35px;
+        margin-top: 10px;
+    }
+    p{
+        color: #fff;
+        font-size: 30px;
+        margin-top: 30px;
+
+    }
+    .titulo{
+        font-size: 56px;
+        text-align: center;
+        color: #14ff72cb;
+        margin-bottom: 30px;
+    }
+
+
+        .contenedor{
+            height: 1320px;
+            width: 80%;
+            margin-right: auto;
+            margin-left:auto ;
+            background-color: black;
+            margin-top: 10px;
+        }
+    </style>

@@ -1,0 +1,19 @@
+---
+const { enlace } = Astro.props; // Recibe la ruta como prop
+import '@fontsource-variable/nabla';
+---
+
+<a href={enlace} style="text-decoration: none;">
+  <button style="
+    padding: 10px 30px;
+    background-color: #14ff72cb;
+    color: white;
+    font-family: 'VT323', monospace;
+    font-size: 25px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  ">
+    MÁS
+  </button>
+</a>

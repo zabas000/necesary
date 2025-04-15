@@ -1,0 +1,97 @@
+---
+import Layout from '../layouts/Layout.astro';
+import VolverInicio from '../components/volverInicio.astro';
+---
+<Layout title="NECESSARY">
+<div class="contenedor">
+   
+    <h1 class="titulo">Componentes del Computador y su Función</h1>
+
+    <h2>Placa Madre (Motherboard)</h2>
+    <p>La placa madre es la base del sistema. En ella se conectan todos los componentes del computador. Facilita la comunicación entre la CPU, RAM, almacenamiento y otros dispositivos. También contiene puertos para conectividad, como USB y HDMI.</p>
+
+    <h2> CPU (Unidad Central de Procesamiento)</h2>
+    <p>Conocido como el "cerebro" del computador, la CPU ejecuta las instrucciones de los programas y realiza cálculos. Está compuesta por miles de millones de transistores que permiten realizar operaciones lógicas y aritméticas. La velocidad de la CPU se mide en GHz (gigahercios).</p>
+
+    <h2>RAM (Memoria de Acceso Aleatorio)</h2>
+    <p>La RAM es una memoria volátil que almacena datos temporales y programas que están en uso. Cuanta más RAM tenga un sistema, más aplicaciones puede ejecutar simultáneamente sin ralentizarse. La RAM se borra cuando se apaga el computador.</p>
+
+    <h2> Disco Duro (HDD) y Unidad de Estado Sólido (SSD)</h2>
+    <p>HDD (Hard Disk Drive): Un dispositivo de almacenamiento que utiliza platos giratorios para almacenar datos. Es más lento que un SSD, pero generalmente tiene mayor capacidad y es más económico.
+
+        SSD (Solid State Drive): Un tipo de almacenamiento que no tiene partes móviles, lo que lo hace más rápido y resistente a golpes. Almacena datos en chips de memoria flash.</p>
+
+    <h2>Fuente de Poder (Power Supply Unit - PSU)</h2>
+    <p>La fuente de poder convierte la corriente alterna (CA) de la toma de corriente en corriente continua (CC) para alimentar los componentes del computador. Proporciona las tensiones adecuadas que cada componente necesita para funcionar correctamente.</p>
+
+    <h2>Tarjeta Gráfica (GPU)</h2>
+    <p>La tarjeta gráfica es responsable de procesar los gráficos y visuales del computador. Si bien muchas placas madre tienen gráficos integrados, una GPU dedicada puede mejorar significativamente el rendimiento en juegos y aplicaciones de diseño.</p>
+
+    <h2>Dispositivos de Entrada y Salida</h2>
+    <p>Dispositivos de entrada: Como teclado y ratón, permiten a los usuarios interactuar con el computador.
+        Dispositivos de salida: Como el monitor y la impresora, muestran o producen la información generada por el computador.</p>
+
+        <VolverInicio />
+
+        <div style="display: flex; justify-content: center; align-items: center; height: 100vh;">
+            <iframe 
+              class="video" 
+              width="560" 
+              height="315" 
+              src="https://www.youtube.com/embed/gMEq5w_4Oz0?si=PzvbdbDW5mxoD6gW" 
+              title="YouTube video player" 
+              frameborder="0" 
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+              referrerpolicy="strict-origin-when-cross-origin" 
+              allowfullscreen>
+            </iframe>
+          </div>
+</div>
+</Layout>
+
+<style>
+    .video-container {
+  width: 100%;
+  max-width: 900px; /* Limitar el ancho máximo del video */
+  aspect-ratio: 16 / 9; /* Mantener la proporción del video */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+/* Estilo para el iframe */
+.video {
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+
+    h2{
+        color:#14ff72cb;
+        font-size: 35px;
+        margin-top: 10px;
+    }
+
+    p{
+        color: #fff;
+        font-size: 30px;
+        margin-top: 30px;
+
+    }
+
+    .contenedor{
+        height: 1640px;
+        width: 80%;
+        margin-right: auto;
+        margin-left:auto ;
+        background-color: black;
+        margin-top: 10px;
+    }
+    .titulo{
+        font-size: 56px;
+        text-align: center;
+        color: #14ff72cb;
+        margin-bottom: 30px;
+    }
+</style>
