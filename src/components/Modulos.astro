@@ -3,7 +3,7 @@ import '@fontsource-variable/nabla';
 import Layout from '../layouts/Layout.astro';
 import VerMas from '../components/VerMas.astro';
 ---
-<div class="slider">
+<section class="slider">
 
 
 	<div class="list">
@@ -12,11 +12,11 @@ import VerMas from '../components/VerMas.astro';
 			<img src="../../public/imagenes/hadwareee.jpg" alt="">
 
 			<div class="content">
-				<div class="title">fundamentos del</div>
-				<div class="type">HADWARE</div>
-				<div class="description">
+				<p class="title">fundamentos del</d>
+				<p class="type">HADWARE</>
+				<p class="description-oscuro"> <!--esta debe ser negro porque el fondo es muy claro  -->
 					Descubre los componentes internos que dan vida a una computadora y aprende cómo ensamblarlos y mantenerlos funcionando a la perfección.
-				</div>
+				</d>
 				<div class="button">
                     <VerMas enlace="/hadware" />
 				</div>
@@ -39,12 +39,12 @@ import VerMas from '../components/VerMas.astro';
 		</div>
 
 		<div class="item">
-			<img src="../../public/imagenes/mantenimiento.jpg" alt="">
+			<img src="../../public/imagenes/mantenimiento.png" alt="">
 
 			<div class="content">
 				<div class="title">MANTENIMIENTO DE </div>
-				<div class="type">SISTEMAS Y SOPORTE</div>
-				<div class="description">
+				<div class="type">SISTEMAS</div>
+				<div class="description-oscuro" > <!--esta debe ser negro porque el fondo es muy claro  -->
 					Optimiza el rendimiento y extiende la vida útil de los sistemas. Aprende a diagnosticar, reparar y prevenir fallos.
 				</div>
 				<div class="button">
@@ -78,60 +78,65 @@ import VerMas from '../components/VerMas.astro';
 
 
 	<div class="nextPrevArrows">
-		<button class="prev"> </button>
-		<button class="next"> </button>
+		<button class="prev"> ⤎ </button>
+		<button class="next"> ⤏ </button>
         <i class="fa-solid fa-arrow-right"></i>
 	</div>
 
 
-</div>
+</section>
 
 
 <script>
-	let nextBtn = document.querySelector('.next')
+let nextBtn = document.querySelector('.next')
 let prevBtn = document.querySelector('.prev')
 
 let slider = document.querySelector('.slider')
-let sliderList = slider.querySelector('.slider .list')
+let sliderList = slider?.querySelector('.slider .list')
 let thumbnail = document.querySelector('.slider .thumbnail')
-let thumbnailItems = thumbnail.querySelectorAll('.item')
+let thumbnailItems = thumbnail?.querySelectorAll('.item')
 
-thumbnail.appendChild(thumbnailItems[0])
+if (thumbnailItems && thumbnailItems.length > 0) {
+    thumbnail?.appendChild(thumbnailItems[0])
+}
 
 // Function for next button 
-nextBtn.onclick = function() {
-    moveSlider('next')
+if (nextBtn) {
+    (nextBtn as HTMLButtonElement).onclick = function() {
+        moveSlider('next')
+    }
 }
-
 
 // Function for prev button 
-prevBtn.onclick = function() {
-    moveSlider('prev')
+if (prevBtn) {
+    (prevBtn as HTMLButtonElement).onclick = function() {
+        moveSlider('prev')
+    }
 }
 
-
-function moveSlider(direction) {
-    let sliderItems = sliderList.querySelectorAll('.item')
+function moveSlider(direction: 'next' | 'prev') {
+    let sliderItems = sliderList?.querySelectorAll('.item')
     let thumbnailItems = document.querySelectorAll('.thumbnail .item')
     
-    if(direction === 'next'){
-        sliderList.appendChild(sliderItems[0])
-        thumbnail.appendChild(thumbnailItems[0])
-        slider.classList.add('next')
-    } else {
-        sliderList.prepend(sliderItems[sliderItems.length - 1])
-        thumbnail.prepend(thumbnailItems[thumbnailItems.length - 1])
-        slider.classList.add('prev')
-    }
-
-
-    slider.addEventListener('animationend', function() {
+    if (sliderItems && thumbnailItems) {
         if(direction === 'next'){
-            slider.classList.remove('next')
+            sliderList?.appendChild(sliderItems[0])
+            thumbnail?.appendChild(thumbnailItems[0])
+            slider?.classList.add('next')
         } else {
-            slider.classList.remove('prev')
+            sliderList?.prepend(sliderItems[sliderItems.length - 1])
+            thumbnail?.prepend(thumbnailItems[thumbnailItems.length - 1])
+            slider?.classList.add('prev')
         }
-    }, {once: true}) // Remove the event listener after it's triggered once
+
+        slider?.addEventListener('animationend', function() {
+            if(direction === 'next'){
+                slider?.classList.remove('next')
+            } else {
+                slider?.classList.remove('prev')
+            }
+        }, {once: true}) // Remove the event listener after it's triggered once
+    }
 }
 </script>
 
@@ -139,18 +144,26 @@ function moveSlider(direction) {
 
  <style>
 	.slider{
-    height: 600px;
-    margin-top: -50px;
-    width: 100%;
+    min-height:88vh;
+    /* max-width:90vh ; */
+    width: 90%;
     overflow: hidden;
-    position: relative;
-	margin-top: 20px;
-    border-radius: 30px 30px;
+    position: absolute;
+	margin-top: -28px;
+    margin-bottom: 40%;
+    border-radius:30px  ;
+    
 }
 
 .description{
     font-size: 20px;
-    box-shadow: #000;
+    color: #e4e0e7;
+    box-shadow: #000;  
+}
+
+.description-oscuro{
+    font-size: 25px;
+    color: #797373;    
 }
 .slider .list .item{
     width: 100%;
@@ -162,6 +175,9 @@ function moveSlider(direction) {
     width: 100%;
     height: 100%;
     object-fit: cover;
+    position: relative;
+    border-radius: 30px;
+
 }
 .slider .list .item .content{
     position: absolute;
@@ -169,22 +185,27 @@ function moveSlider(direction) {
     width: 1140px;
     max-width: 80%;
     left: 50%;
+    /* background-color: #6c20a6; */
     transform: translateX(-50%);
-    padding-right: 30%;
+    padding-right: 20%;
     box-sizing: border-box;
     color: #fff;
     text-shadow: 0 5px 10px #0004;
+    
 }
 
 .slider .list .item .content .title,
 .slider .list .item .content .type{
     font-size: 5em;
     font-weight: bold;
-    line-height: 1.3em;
+    line-height: 1.1em;
 }
+
+
 .slider .list .item .type{
     color: #14ff72cb;
 }
+
 .slider .list .item .button{
     display: grid;
     grid-template-columns: repeat(2, 130px);
@@ -192,69 +213,42 @@ function moveSlider(direction) {
     gap: 5px;
     margin-top: 20px;
 }
+
 .slider .list .item .button button{
     border: none;
-    background-color: #f6f6f6;
+    background-color: #fff;
     font-family: Poppins;
     font-weight: 500;
     cursor: pointer;
     transition: 0.4s;
     letter-spacing: 2px;
     border-radius: 30px 30px;
-}
+} 
 
 
-.slider .list .item .button button:hover{
-    letter-spacing: 3px;
-}
-.slider .list .item .button button:nth-child(2){
+/* .slider .list .item .button button:hover{
+    letter-spacing: 10px;
+} */
+
+/* .slider .list .item .button button:nth-child(2){
     background-color: transparent;
-    border: 1px solid #fff;
+    border: 30px solid #fff;
     color: #eee;
-}
+} */
 
-
-
-
-
-/* Thumbnail Section  */
-.thumbnail{
-    position: absolute;
-    bottom: 50px;
-    left: 80%;
-    width: max-content;
-    z-index: 100;
-    display: flex;
-    gap: 20px;
-}
-
-.thumbnail .item{
-    width: 150px;
-    height: 220px;
-    flex-shrink: 0;
-    position: relative;
-}
-
-.thumbnail .item img{
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    border-radius: 20px;
-    box-shadow: 5px 0 15px rgba(0, 0, 0, 0.3);
-}
 
 
 /* nextPrevArrows Section  */
 .nextPrevArrows{
     position: absolute;
-    top: 80%;
-    right: 52%;
+    top: 90%;
+    right: 26%;
     z-index: 100;
     width: 300px;
     max-width: 30%;
     display: flex;
-    gap: 10px;
-    align-items: center;
+    gap: 20px;
+    align-items:flex-start;
 }
 .nextPrevArrows button{
     width: 40px;
@@ -262,14 +256,14 @@ function moveSlider(direction) {
     border-radius: 50%;
     background-color: #14ff72cb;
     border: none;
-    color: #fff;
+    color: #ffffff;
     font-family: monospace;
     font-weight: bold;
     transition: .5s;
     cursor: pointer;
 }
 .nextPrevArrows button:hover{
-    background-color: #fff;
+    background-color: #6c20a6;
     color: #000;
 }
 
@@ -334,22 +328,13 @@ function moveSlider(direction) {
     }
 }
 
-.slider.next .thumbnail .item:nth-last-child(1){
+/* .slider.next .thumbnail .item:nth-last-child(1){
     overflow: hidden;
     animation: showThumbnail .5s linear 1 forwards;
-}
+} */
 .slider.prev .list .item img{
     z-index: 100;
 }
-
-
-@keyframes showThumbnail{
-    from{
-        width: 0;
-        opacity: 0;
-    }
-}
-
 
 .slider.next .thumbnail{
     animation: effectNext .5s linear 1 forwards;
@@ -360,7 +345,6 @@ function moveSlider(direction) {
         transform: translateX(150px);
     }
 }
-
 
 
 /* Animation for prev button click */
@@ -393,7 +377,6 @@ function moveSlider(direction) {
 .slider.prev .nextPrevArrows button{
     pointer-events: none;
 }
-
 
 .slider.prev .list .item:nth-child(2) .content .title,
 .slider.prev .list .item:nth-child(2) .content .type,

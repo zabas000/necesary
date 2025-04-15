@@ -1,0 +1,131 @@
+---
+import '@fontsource-variable/nabla';
+import Layout from '../layouts/Layout.astro';
+import Header from '../components/header.astro';
+import VolverInicio from '../components/volverInicio.astro';
+---
+<Layout title="Necesary"></Layout>
+    <section class="parent">
+        <div class="div1">
+            <img id="imgGrupo"  src="../../public/imagenes/imagenesGaleria/grupo1.jpeg" alt="1">
+        </div>
+
+        <div class="div2">
+            <img src=".../../public/imagenes/imagenesGaleria/practica.jpeg" alt="2">
+        </div>
+
+        <div class="div3">
+            <img src="../../public/imagenes/imagenesGaleria/practica2.jpeg" alt="3">
+        </div>
+
+        <div class="div4">
+            <img src="../../public/imagenes/imagenesGaleria/practica3.jpeg" alt="4">
+        </div>
+
+        <div class="div5">
+            <img src="../../public/imagenes/imagenesGaleria/sena.jpeg" alt="">
+        </div>
+
+        <div class="div6">
+            <img id="imgGrupo" src="../../public/imagenes/imagenesGaleria/practica4.webp" alt="">
+        </div>
+
+        <div class="div7">
+            <img  src="../../public/imagenes/imagenesGaleria/multimetro.jpeg" alt="">
+        </div>
+
+        
+    <section/>
+
+
+
+</Layout>
+<VolverInicio />
+<style>
+ .parent {
+    display: grid;
+    grid-template-columns: repeat(8, 1fr);
+    grid-template-rows: repeat(8, 1fr);
+    gap: 8px;
+    height: 100vh;
+    margin: 10px; 
+}
+
+img{
+    width: 100%;
+    height: 100%;
+    border-radius: 20px;
+    object-fit: cover;
+    grid-column: span 4 / span 4;
+    grid-row: span 5 / span 5;
+    border-radius: 20px;
+}
+
+#imgGrupo{
+    width: 100%;
+    height: 100%;
+    border-radius: 20px;
+    object-fit:cover;
+    grid-column: span 4 / span 4;
+    grid-row: span 5 / span 5;
+
+    border-radius: 20px;
+}
+    
+.div1 {
+    grid-column: span 4 / span 4;
+    grid-row: span 5 / span 5;
+ 
+    border-radius: 20px;
+    
+}
+
+.div2 {
+    grid-column: span 2 / span 2;
+    grid-row: span 4 / span 4;
+    grid-column-start: 5;
+    background-color: antiquewhite;
+    border-radius: 20px;
+}
+
+.div3 {
+    grid-column: span 2 / span 2;
+    grid-row: span 4 / span 4;
+    grid-column-start: 5;
+    grid-row-start: 5;
+    border-radius: 20px;
+}
+
+.div4 {
+    grid-column: span 2 / span 2;
+    grid-row: span 5 / span 5;
+    grid-column-start: 7;
+    grid-row-start: 1;
+    border-radius: 20px;
+}
+
+.div5 {
+    grid-column: span 2 / span 2;
+    grid-row: span 3 / span 3;
+    grid-column-start: 7;
+    grid-row-start: 6;
+    border-radius: 20px;
+}
+
+.div6 {
+    grid-column: span 2 / span 2;
+    grid-row: span 3 / span 3;
+    grid-column-start: 1;
+    grid-row-start: 6;
+    border-radius: 20px;
+}
+
+.div7 {
+    grid-column: span 2 / span 2;
+    grid-row: span 3 / span 3;
+    grid-column-start: 3;
+    grid-row-start: 6;
+    border-radius: 20px;
+}
+     
+</style>
