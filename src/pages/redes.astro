@@ -2,142 +2,244 @@
 import Layout from '../layouts/Layout.astro';
 import VolverInicio from '../components/volverInicio.astro';
 ---
-<Layout title="NECESSARY">
-    <div class="contenedor">
+<Layout title="NECESSARY ">
+<div class="contenedor">
+<section class="menu">
+  <VolverInicio />
+</section>
+  
+  <section class="partes">
+    <section class="titulo">
+      <h1>REDES Y CONECTIVIDAD</h1>
+      <p class="descripcion">
+        Aprende los fundamentos de las redes y la conectividad, desde los tipos de redes hasta el direccionamiento y los comandos útiles.
+      </p>
+    </section>
 
-      <h1 class="titulo">Introducción al Módulo de Redes</h1>
-      <p>En este módulo de redes, los estudiantes aprenderán los conceptos y habilidades fundamentales para entender y trabajar con redes de computadoras. Una red permite la comunicación entre diferentes dispositivos, facilitando el intercambio de datos y la administración de recursos en cualquier entorno de trabajo.</p>
+    <section class="introduccion">
+      <h2>Fundamentos de redes</h2>
+      <p>Las redes estan presente cada vez mas en nuestra vida</p>
+      
+      <div class="js-lista">
+        <ul>
+          <li>
+            <button class="check-btn" aria-label="Completado">
+              <svg width="18" height="18" viewBox="0 0 20 20" fill="none">
+                <circle cx="10" cy="10" r="9" fill="#14ff72cb"/>
+                <path d="M7 11.5L9.5 14L14 9.5" stroke="#101111" stroke-width="2" stroke-linecap="round"/>
+              </svg>
+            </button>
+            <a href="#">¿Qué es una red LAN, WAN, MAN, WLAN.?</a>
+          </li>
+          <li>
+            <button class="check-btn" aria-label="Completado">
+              <svg width="18" height="18" viewBox="0 0 20 20" fill="none">
+                <circle cx="10" cy="10" r="9" fill="#14ff72cb"/>
+                <path d="M7 11.5L9.5 14L14 9.5" stroke="#101111" stroke-width="2" stroke-linecap="round"/>
+              </svg>
+            </button>
+            <a href="#">componentes de una red</a>
+          </li>
+          <li>
+            <button class="check-btn" aria-label="Completado">
+              <svg width="18" height="18" viewBox="0 0 20 20" fill="none">
+                <circle cx="10" cy="10" r="9" fill="#14ff72cb"/>
+                <path d="M7 11.5L9.5 14L14 9.5" stroke="#101111" stroke-width="2" stroke-linecap="round"/>
+              </svg>
+            </button>
+            <a href="#">Direccionamiento </a>
+          </li>
+          <li>
+            <button class="check-btn" aria-label="Completado">
+              <svg width="18" height="18" viewBox="0 0 20 20" fill="none">
+                <circle cx="10" cy="10" r="9" fill="#14ff72cb"/>
+                <path d="M7 11.5L9.5 14L14 9.5" stroke="#101111" stroke-width="2" stroke-linecap="round"/>
+              </svg>
+            </button>
+            <a href="#">Comandos utiles</a>
+          </li>
+        </ul>
+      </div>
+    </section>
 
-      <h2>Objetivo del Módulo</h2>
-      <p>Proporcionar a los estudiantes las bases teóricas y prácticas para diseñar, configurar e instalar redes de área local (LAN), incluyendo conocimientos esenciales sobre ponchado de cables, instalación de canaletas, y configuración básica de dispositivos de red.</p>
-
-
-      <h2>Temas Clave</h2>
+    <section class="introduccion">
+      <h2> Cableado estructurado</h2>
       <p>
-        Conceptos básicos de redes: tipos de redes, dispositivos de red (routers, switches), y protocolos de comunicación.</p>
+      </p>
+      
+      <div class="js-lista">
+        <ul>
+          <li>
+            <button class="check-btn" aria-label="Completado">
+              <svg width="18" height="18" viewBox="0 0 20 20" fill="none">
+                <circle cx="10" cy="10" r="9" fill="#14ff72cb"/>
+                <path d="M7 11.5L9.5 14L14 9.5" stroke="#101111" stroke-width="2" stroke-linecap="round"/>
+              </svg>
+            </button>
+            <a href="#">Normas TIA/EIA-568A y 568B.</a>
+          </li>
+          <li>
+            <button class="check-btn" aria-label="Completado">
+              <svg width="18" height="18" viewBox="0 0 20 20" fill="none">
+                <circle cx="10" cy="10" r="9" fill="#14ff72cb"/>
+                <path d="M7 11.5L9.5 14L14 9.5" stroke="#101111" stroke-width="2" stroke-linecap="round"/>
+              </svg>
+            </button>
+            <a href="#">Ponchado de cables UTP </a>
+          </li>
+          <li>
+            <button class="check-btn" aria-label="Completado">
+              <svg width="18" height="18" viewBox="0 0 20 20" fill="none">
+                <circle cx="10" cy="10" r="9" fill="#14ff72cb"/>
+                <path d="M7 11.5L9.5 14L14 9.5" stroke="#101111" stroke-width="2" stroke-linecap="round"/>
+              </svg>
+            </button>
+            <a href="#">Uso de canaletas y organización física.</a>
+          </li>
+        </ul>
+      </div>
+    </section>
+  </section>
 
-        <p>Instalación de cables de red: ponchado de cables, tipos de conectores, y normas de cableado (T568A/T568B).</p>
 
-        <p>Organización y seguridad del cableado: instalación de canaletas para mantener la seguridad y organización de los cables de red.</p>
 
-        <p>Configuración de dispositivos: configuración inicial de routers y switches, asignación de direcciones IP, y conexión de dispositivos.</p>
 
-        <div style="display: flex; justify-content: center; align-items: center; height: 100vh;">
-            <iframe 
-              class="video" 
-              width="560" 
-              height="315" 
-              src="https://www.youtube.com/embed/uunnO9yZCYk?si=RM-ASmvDjohrBt1i" 
-              title="YouTube video player" 
-              frameborder="0" 
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
-              referrerpolicy="strict-origin-when-cross-origin" 
-              allowfullscreen>
-            </iframe>
-          </div>
+
+  
+</div>
+</Layout>
+
+<style>
+.contenedor {
+  
+  display: flex;
+  flex-direction: row;
+  height: auto;
+  width: 100%;
+}
+
+h1 {
+    color: #14ff72cb;
+    text-align: start;
+    font-size: 6rem;
+    padding-left: 10px;
+  }
+  .descripcion {
+    color: white;
+    text-align: start-end;
+    font-size: 1.2rem;
+    font-family:monospace;
+     white-space:inherit;
+    padding-left: 10px;
+  }
+
+  h2 {
+    color:#14ff72cb;
+    text-align: start;
+    font-size: 2.5rem;
+    padding-left: 10px;
+  }
+  p {
+    color: white;
+    text-align: start;
+    font-size: 1rem;
+    font-family:monospace;
+    padding-left: 10px;
+  }
+.menu{
+  position:static;
+  height: auto;
+   width: 30%;
+   background-color: #101111cb;
+  }
+
  
-          <h1 class="titulo">PONCHADO DE CLABES</h1>
-          <p>El ponchado de cables de red es el proceso de preparar y conectar los extremos de los cables UTP a conectores RJ-45, permitiendo que los dispositivos puedan comunicarse a través de la red. A continuación, se detallan los pasos básicos y los materiales necesarios para realizar un ponchado correcto.</p>
 
-          <h2>Materiales Necesarios</h2>
-          <p>
-            Cable UTP (categoría 5e o 6): el tipo de cable comúnmente utilizado en redes LAN.
-            Conectores RJ-45: los conectores de 8 pines que se colocan en los extremos del cable.
-            Alicate ponchador (crimpadora): herramienta que permite fijar los conectores al cable.
-            Pelacables: herramienta para retirar la funda exterior del cable sin dañar los hilos internos.
-          </p>
+  .partes{
+    height:auto;
+    width: 70%;
+    background-color:#101111cb;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: start;
 
-
-          <div style="display: flex; justify-content: center; align-items: center; height: 100vh;">
-            <iframe 
-              class="video" 
-              width="560" 
-              height="315" 
-              < src="https://www.youtube.com/embed/m0BZkHj6p7U?si=GJaKGVmyoKnDOb_l" 
-              title="YouTube video player" 
-              frameborder="0" 
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
-              referrerpolicy="strict-origin-when-cross-origin" 
-              allowfullscreen>
-            </iframe>
-          </div>
-
-
-
-
-         
-
-        <VolverInicio />
-    </div>
-   
-    </Layout>
-    
-    <style>
-
-
-.video-container {
+  }
+  .titulo{
+    height:50vh ;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: center;
+    background-color: transparent;
+    padding-left:
+  }
+  .introduccion {
+  height: 50vh;
   width: 100%;
-  max-width: 900px; /* Limitar el ancho máximo del video */
-  aspect-ratio: 16 / 9; /* Mantener la proporción del video */
   display: flex;
-  justify-content: center;
-  align-items: center;
+  flex-direction: column;
+  align-items: start;
+  justify-content: start;
+  background-color: transparent;
   position: relative;
 }
 
-/* Estilo para el iframe */
-.video {
-  width: 100%;
-  height: 100%;
-  border: none;
+.js-lista {
+  position: absolute;
+  top: 40px;
+  right: 30vh; /* <-- Cambia este valor para mover la lista a la izquierda */
+  width: 270px;
+  min-width: 220px;
+  background: transparent;
 }
 
+.js-lista ul {
+  list-style: none;
+  padding: 0 20px;
+  margin: 0;
+}
 
-
-h2{
-        color:#14ff72cb;
-        font-size: 35px;
-        margin-top: 10px;
-    }
-    p{
-        color: #fff;
-        font-size: 30px;
-        margin-top: 30px;
-
-    }
-    .titulo{
-        font-size: 56px;
-        text-align: center;
-        color: #14ff72cb;
-        margin-bottom: 30px;
-    }
-
-
-
-
-    .video-container {
-  width: 100%;
-  max-width: 900px; /* Limitar el ancho máximo del video */
-  aspect-ratio: 16 / 9; /* Mantener la proporción del video */
+.js-lista li {
+  color: #fff;
+  font-family: monospace;
+  font-size: 1.1rem;
+  margin-bottom: 18px;
   display: flex;
-  justify-content: center;
   align-items: center;
-  position: relative;
+  gap: 8px;
+  opacity: 0.9;
 }
 
-/* Estilo para el iframe */
-.video {
-  width: 100%;
-  height: 100%;
+.check-btn {
+  background: #101111;
   border: none;
+  border-radius: 50%;
+  padding: 2px;
+  margin-right: 6px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: default;
+  box-shadow: 0 1px 4px #0004;
 }
 
- .contenedor{
-    height: 2200px;
-    width: 80%;
-    margin-right: auto;
-    margin-left:auto ;
-    background-color: black;
-    margin-top: 10px;
+.check-btn svg {
+  display: block;
 }
-    </style>
+
+
+.js-lista li a {
+  color: inherit;
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+.js-lista li a:hover {
+  color: #14ff72cb;
+  text-decoration: underline;
+}
+
+
+</style>

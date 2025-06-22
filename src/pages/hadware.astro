@@ -2,92 +2,214 @@
 import Layout from '../layouts/Layout.astro';
 import VolverInicio from '../components/volverInicio.astro';
 ---
-<Layout title="NECESSARY">
+<Layout title="NECESSARY ">
 <div class="contenedor">
-   
-    <h1 class="titulo">1.Instalación y configuración de sistemas operativos</h1>
-      <p>Aprende a instalar y configurar sistemas operativos, software básico y herramientas necesarias para preparar y optimizar un equipo desde cero. </p>
+<section class="menu">
+  <VolverInicio />
+</section>
+  
+  <section class="partes">
+    <section class="titulo">
+      <h1>SOFTWARE</h1>
+      <p class="descripcion">El software es el conjunto de instrucciones y datos que permiten a una computadora realizar tareas específicas. A diferencia del hardware, que son los componentes físicos, el software es intangible </p>
+    </section>
 
-      <h2 class="parte1 ">-Como crear una USB BOOTEABLE y configurar el arranque (con rufus) </h2>
-        <p class="pasos1 ">
-          -Debes tener una memoria USB de al menos 8 GB.
-          <br>-Necesitas una imagen ISO del sistema operativo (Windows, Linux, etc.).
-          <br>-El programa Rufus (gratuito): https://rufus.ie
-          <br>-Luego instala la ultima version
-          <br>-Conectar la USB (no debe tener informacion ya que va ser formateada) 
-          <br>-ejecuta el rufus y selecciona la USB que quieres usar.
-          <br>-en la comfiguracion de formato debes tener esto en cuenta:MBR si es para BIOS/UEFI antiguos y GPT si es para equipos modernos con UEFI.
-          <br>-luego de le das en empezar,esperas a que termine el proceso y tu USB estara lista para usar.<br><br>
+    <section class="introduccion">
+      <h2>introduccion al software</h2>
+      <p>El software es esencial para el funcionamiento de<br> cualquier sistema informático.</p>
+      
+      <div class="js-lista">
+        <ul>
+          <li>
+            <button class="check-btn" aria-label="Completado">
+              <svg width="18" height="18" viewBox="0 0 20 20" fill="none">
+                <circle cx="10" cy="10" r="9" fill="#14ff72cb"/>
+                <path d="M7 11.5L9.5 14L14 9.5" stroke="#101111" stroke-width="2" stroke-linecap="round"/>
+              </svg>
+            </button>
+            <a href="#">¿Qué es el software?</a>
+          </li>
+          <li>
+            <button class="check-btn" aria-label="Completado">
+              <svg width="18" height="18" viewBox="0 0 20 20" fill="none">
+                <circle cx="10" cy="10" r="9" fill="#14ff72cb"/>
+                <path d="M7 11.5L9.5 14L14 9.5" stroke="#101111" stroke-width="2" stroke-linecap="round"/>
+              </svg>
+            </button>
+            <a href="#">Como hacer una USB booteable</a>
+          </li>
+          <li>
+            <button class="check-btn" aria-label="Completado">
+              <svg width="18" height="18" viewBox="0 0 20 20" fill="none">
+                <circle cx="10" cy="10" r="9" fill="#14ff72cb"/>
+                <path d="M7 11.5L9.5 14L14 9.5" stroke="#101111" stroke-width="2" stroke-linecap="round"/>
+              </svg>
+            </button>
+            <a href="#">Como particionar un disco</a>
+          </li>
+          <li>
+            <button class="check-btn" aria-label="Completado">
+              <svg width="18" height="18" viewBox="0 0 20 20" fill="none">
+                <circle cx="10" cy="10" r="9" fill="#14ff72cb"/>
+                <path d="M7 11.5L9.5 14L14 9.5" stroke="#101111" stroke-width="2" stroke-linecap="round"/>
+              </svg>
+            </button>
+            <a href="#">Progrmas mas utilizados</a>
+          </li>
+          <li>
+            <button class="check-btn" aria-label="Completado">
+              <svg width="18" height="18" viewBox="0 0 20 20" fill="none">
+                <circle cx="10" cy="10" r="9" fill="#14ff72cb"/>
+                <path d="M7 11.5L9.5 14L14 9.5" stroke="#101111" stroke-width="2" stroke-linecap="round"/>
+              </svg>
+            </button>
+            <a href="#">Maquinas Virtuales</a>
+          </li>
+        </ul>
+      </div>
+    </section>
+  </section>
 
-          <span> Despues terminar con este proceso debes configurar el arranque de tu equipo para que inicie desde la USB.Esto se hace entrenado a la BIOS de tu equipo ( el metado de acceso a la BIOS varía según el fabricante, pero generalmente se hace presionando teclas como F2, F10, DEL o ESC al encender el equipo).<br><br></span>
-
-          -Una vez dentro de la BIOS, busca la sección de "Boot" o "Arranque".
-          <br>-Asegúrate de que la USB esté configurada como el primer dispositivo de arranque.
-          <br>-Guarda los cambios y reinicia el equipo.
-          <br>-Tu equipo debería arrancar desde la USB y comenzar el proceso de instalación del sistema operativo.
-          </p><br>
 
 
 
-       <h1 class="titulo">2.Programas mas importantes y utilizados </h1>
-       <p>Existe una gran variedad de programas que son ecenciales en nuestro campo de sistemas ya los usaremos constante mente</p>
-
-        <h2 class="parte1">-Programas importantes</h2>
-        <p class="pasos1">
-          -Rufus: Crear USB booteables con sistemas operativos.<br>
-          -WinRAR: Comprimir y descomprimir archivos.<br>
-          -Microsoft office: Suite de productividad (Word, Excel, PowerPoint).<br>
-          -CCleaner: Limpiar y optimizar el sistema.<br>
-        </p><br>
-
-          <h1 class="titulo">3.Conceptos de virtualización</h1>
-
-        <VolverInicio />
 
   
 </div>
 </Layout>
 
 <style>
+.contenedor {
   
-    .contenedor{
-        height: 1640px;
-        width: 80%;
-        margin-right: auto;
-        margin-left:auto ;
-        background-color: black;
-        margin-top: 10px;
-    }
-    .titulo{
-        font-size: 56px;
-        text-align: center;
-        color: #14ff72cb;
-        margin-bottom: 30px;
-    }
-    h2{
-        color:#14ff72cb;
-        font-size: 35px;
-        margin-top: 10px;
-    }
-    .parte1{
-        margin-top: 40px;
-    }
+  display: flex;
+  flex-direction: row;
+  height: auto;
+  width: 100%;
+}
 
-    p{
-        color: #fff;
-        font-size: 30px;
-        margin-top: 30px;
-        text-align: center;
-    }
-    .pasos1{
-        margin-top: 20px;
-        text-align:start;
-        font-size: 25px;
-    }
+h1 {
+    color: #14ff72cb;
+    text-align: start;
+    font-size: 7rem;
+    padding-left: 10px;
+  }
+  .descripcion {
+    color: white;
+    text-align: start-end;
+    font-size: 1.5rem;
+    font-family:monospace;
+     white-space:inherit;
+    padding-left: 10px;
+  }
 
-    span{
-        color: #14ff72cb;
-        font-size: 30px;
-    }
+  h2 {
+    color:#14ff72cb;
+    text-align: start;
+    font-size: 2.5rem;
+    padding-left: 10px;
+  }
+  p {
+    color: white;
+    text-align: start;
+    font-size: 1rem;
+    font-family:monospace;
+    padding-left: 10px;
+  }
+.menu{
+  position:static;
+  height: auto;
+   width: 30%;
+   background-color: #101111cb;
+  }
+
+ 
+
+  .partes{
+    height:auto;
+    width: 70%;
+    background-color:#101111cb;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: start;
+
+  }
+  .titulo{
+    height:50vh ;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: center;
+    background-color: transparent;
+    padding-left:
+  }
+  .introduccion {
+  height: 50vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  justify-content: start;
+  background-color: transparent;
+  position: relative;
+}
+
+.js-lista {
+  position: absolute;
+  top: 40px;
+  right: 30vh; /* <-- Cambia este valor para mover la lista a la izquierda */
+  width: 270px;
+  min-width: 220px;
+  background: transparent;
+}
+
+.js-lista ul {
+  list-style: none;
+  padding: 0 20px;
+  margin: 0;
+}
+
+.js-lista li {
+  color: #fff;
+  font-family: monospace;
+  font-size: 1.1rem;
+  margin-bottom: 18px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  opacity: 0.9;
+}
+
+.check-btn {
+  background: #101111;
+  border: none;
+  border-radius: 50%;
+  padding: 2px;
+  margin-right: 6px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: default;
+  box-shadow: 0 1px 4px #0004;
+}
+
+.check-btn svg {
+  display: block;
+}
+
+
+.js-lista li a {
+  color: inherit;
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+.js-lista li a:hover {
+  color: #14ff72cb;
+  text-decoration: underline;
+}
+
 
 </style>
+
