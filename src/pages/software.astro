@@ -1,11 +1,13 @@
 ---
 import Layout from '../layouts/Layout.astro';
-import VolverInicio from '../components/volverInicio.astro';
+import Menu from '../components/menu.astro';
 ---
 <Layout title="NECESSARY ">
 <div class="contenedor">
-<section class="menu">
-  <VolverInicio />
+<Menu>
+    
+</Menu>
+
 </section>
   
   <section class="partes">
@@ -27,7 +29,7 @@ import VolverInicio from '../components/volverInicio.astro';
                 <path d="M7 11.5L9.5 14L14 9.5" stroke="#101111" stroke-width="2" stroke-linecap="round"/>
               </svg>
             </button>
-            <a href="#">¿Qué es el software?</a>
+            <a href="/clase/que-es-software">¿Qué es el software?</a>
           </li>
           <li>
             <button class="check-btn" aria-label="Completado">
@@ -71,10 +73,7 @@ import VolverInicio from '../components/volverInicio.astro';
   </section>
 
 
-
-
-
-  
+ 
 </div>
 </Layout>
 
@@ -115,15 +114,6 @@ h1 {
     font-family:monospace;
     padding-left: 10px;
   }
-.menu{
-  position:static;
-  height: auto;
-   width: 30%;
-   background-color: #101111cb;
-  }
-
- 
-
   .partes{
     height:auto;
     width: 70%;

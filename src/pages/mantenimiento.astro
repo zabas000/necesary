@@ -1,12 +1,13 @@
 ---
 import Layout from '../layouts/Layout.astro';
 import VolverInicio from '../components/volverInicio.astro';
+import Menu from '../components/menu.astro';
 ---
 <Layout title="NECESSARY ">
 <div class="contenedor">
-<section class="menu">
-  <VolverInicio />
-</section>
+    <Menu>
+    
+  </Menu>
   
   <section class="partes">
     <section class="titulo">
@@ -17,9 +18,9 @@ import VolverInicio from '../components/volverInicio.astro';
     </section>
 
     <section class="introduccion">
-      <h2>Mantenimiento preventivo</h2>
+      <h2>Tipos de mantenimientos</h2>
       <p>
-        El mantenimiento preventivo es esencial para garantizar <br>el buen funcionamiento y la longevidad de <br>los equipos informáticos.
+        El mantenimiento es esencial para garantizar <br>el buen funcionamiento y la longevidad de <br>los equipos informáticos.
       </p>
       
       <div class="js-lista">
@@ -31,7 +32,7 @@ import VolverInicio from '../components/volverInicio.astro';
                 <path d="M7 11.5L9.5 14L14 9.5" stroke="#101111" stroke-width="2" stroke-linecap="round"/>
               </svg>
             </button>
-            <a href="#">¿Qué es y para que sirve?</a>
+            <a href="#">mantenimiento preventivo</a>
           </li>
           <li>
             <button class="check-btn" aria-label="Completado">
@@ -40,69 +41,13 @@ import VolverInicio from '../components/volverInicio.astro';
                 <path d="M7 11.5L9.5 14L14 9.5" stroke="#101111" stroke-width="2" stroke-linecap="round"/>
               </svg>
             </button>
-            <a href="#">Cuando se debe hacer</a>
-          </li>
-          <li>
-            <button class="check-btn" aria-label="Completado">
-              <svg width="18" height="18" viewBox="0 0 20 20" fill="none">
-                <circle cx="10" cy="10" r="9" fill="#14ff72cb"/>
-                <path d="M7 11.5L9.5 14L14 9.5" stroke="#101111" stroke-width="2" stroke-linecap="round"/>
-              </svg>
-            </button>
-            <a href="#">check lists y registro tecncico </a>
+            <a href="#">mantenimiento correctivo</a>
           </li>
         </ul>
       </div>
     </section>
 
-    <section class="introduccion">
-      <h2> Mantenimiento Correctivo</h2>
-      <p>
-        El mantenimiento correctivo es el proceso de reparar <br>o reemplazar componentes defectuosos 
-
-      </p>
-      
-      <div class="js-lista">
-        <ul>
-          <li>
-            <button class="check-btn" aria-label="Completado">
-              <svg width="18" height="18" viewBox="0 0 20 20" fill="none">
-                <circle cx="10" cy="10" r="9" fill="#14ff72cb"/>
-                <path d="M7 11.5L9.5 14L14 9.5" stroke="#101111" stroke-width="2" stroke-linecap="round"/>
-              </svg>
-            </button>
-            <a href="#">Que es y para que sirve</a>
-          </li>
-          <li>
-            <button class="check-btn" aria-label="Completado">
-              <svg width="18" height="18" viewBox="0 0 20 20" fill="none">
-                <circle cx="10" cy="10" r="9" fill="#14ff72cb"/>
-                <path d="M7 11.5L9.5 14L14 9.5" stroke="#101111" stroke-width="2" stroke-linecap="round"/>
-              </svg>
-            </button>
-            <a href="#">cuando se debe hacer</a>
-          </li>
-           <li>
-            <button class="check-btn" aria-label="Completado">
-              <svg width="18" height="18" viewBox="0 0 20 20" fill="none">
-                <circle cx="10" cy="10" r="9" fill="#14ff72cb"/>
-                <path d="M7 11.5L9.5 14L14 9.5" stroke="#101111" stroke-width="2" stroke-linecap="round"/>
-              </svg>
-            </button>
-            <a href="#">Verificacion de componentes</a>
-          </li>
-          <li>
-            <button class="check-btn" aria-label="Completado">
-              <svg width="18" height="18" viewBox="0 0 20 20" fill="none">
-                <circle cx="10" cy="10" r="9" fill="#14ff72cb"/>
-                <path d="M7 11.5L9.5 14L14 9.5" stroke="#101111" stroke-width="2" stroke-linecap="round"/>
-              </svg>
-            </button>
-            <a href="#">Remplazo de componentes</a>
-          </li>
-        </ul>
-      </div>
-    </section>
+    
 
     <section class="introduccion">
       <h2> Componentes </h2>
@@ -130,15 +75,6 @@ import VolverInicio from '../components/volverInicio.astro';
             </button>
             <a href="#">Como interactua cada uno </a>
           </li>
-           <li>
-            <button class="check-btn" aria-label="Completado">
-              <svg width="18" height="18" viewBox="0 0 20 20" fill="none">
-                <circle cx="10" cy="10" r="9" fill="#14ff72cb"/>
-                <path d="M7 11.5L9.5 14L14 9.5" stroke="#101111" stroke-width="2" stroke-linecap="round"/>
-              </svg>
-            </button>
-            <a href="#">verificar fuente de poder</a>
-        </li>
         </ul>
       </div>
     </section>
