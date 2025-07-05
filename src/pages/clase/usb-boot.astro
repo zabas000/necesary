@@ -1,0 +1,135 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Menu from '../../components/menu.astro';
+---
+
+<Layout title="NECESSARY ">
+    <div class="contenedor">
+        <Menu></Menu>
+
+        <section class="info">
+            <h1>¿Que es una USB boot?</h1>
+            <p class="definicion">Una USB boot (también llamada USB booteable) es una memoria USB preparada para arrancar un computador desde ella. Se utiliza para instalar, reparar o probar un sistema operativo, como Windows, Linux o herramientas de diagnóstico. Es una herramienta esencial para cualquier Técnico en Sistemas.</p>
+
+            <div class="resaltado">
+                <p class="marcado">
+                    Aprender a crear una USB booteable en la media técnica de Técnico en Sistemas del SENA es fundamental porque permite al estudiante adquirir habilidades prácticas para instalar y reparar sistemas operativos. Esta competencia es esencial en el campo de la informática, ya que facilita el mantenimiento y la recuperación de equipos
+                </p>
+
+            </div>
+            
+            <h2>Como hacer una USB boot</h2>
+                <ul>
+                    <li><strong>Paso-1 Instalar Rufus</strong>En esta caso estaremos usando rufus ya que es de los comunes y faciles <a href="https://rufus.ie/es/">instalar Rufus</a> </li><br>
+                    <li><strong>Paso-2 Descargar la ISO</strong> Una imagen ISO de un sistema operativo es un archivo que contiene una copia exacta del contenido de un disco óptico, como un CD, DVD o Blu-ray, incluyendo su estructura de archivos y datos.</li><br>
+                    <li><strong>Paso-3 Ejecuatar Rufus</strong> Al ejecutar rufus en la parte superior seleccionamos nuestra USB</li><br>
+                    <li><strong>Paso-4 Seleccionar Nuestra ISO</strong> Seleccionamos la ISO con el sistema oprativo que queremos bootear en nuestra USB </li><br>
+                    <li><strong>Paso-5 Configuar el sistema de arranque</strong>Si la vas a usar una computadora moderna que usa UEFI elige --> GPT, Si es antiguo elige --> MBR </li><br>
+                    <li><strong>Paso-6 Iniciar la creacion</strong> Le das clic en empezar ,aceptas el mensaje de formateo de USB y luego esperas a que el proceso finalice </li><br>
+                    <li><strong>Paso-7 configurar la BIOS</strong> En la computadora donde usaremos la USB boot deebemos configurar el sistema de arranque para que inicie por nuestra USB, para ello reiniciamos la computadora y ingrezamos la BIOS (el metdo varia dependiendo de la marca, normalmente es presionando F10)</li><br>
+                    <li><strong>Paso-8 Elegir la USB </strong> Una vez dentro de la BIOS buscas el menu "boot menu" y usando F5 y F6 pones el primer lugar la USB... Luego le das en salir y guardar los cambios</li><br>
+                    <li><strong>Paso-9 Instalacion</strong> El sistema iniciara por la USB y comenzaremos con el proceso de instalacion de nuestro sistema operativo</li><br>
+                </ul>
+
+                <h2>Programas para crear USB BOOT</h2>
+            <div class="resaltado">
+                <p class="marcado">
+                    -Rufus: Crea USB booteables rápido, ideal para Windows y Linux. <a href="https://rufus.ie/es/">instalar </a>  <br>
+                    -Ventoy: Permite guardar varias ISOs en una sola USB. <a href="https://www.ventoy.net/en/download.html">instalar </a> <br>
+                    -UNetbootin: Para crear USB con sistemas Linux.<a href=" https://unetbootin.github.io">instalar </a> <br>
+                    -WinSetupFromUSB: Crea USB con varios Windows y Linux.<a href="http://www.winsetupfromusb.com">instalar</a> <br>
+                </p>
+            </div>
+        </section>
+    </div>
+  
+</Layout>
+
+
+
+<style>
+    .contenedor {
+  
+  display: flex;
+  flex-direction: row;
+  height: auto;
+  width: 100%;
+  margin-bottom: 8rem;
+  background-color: #101111cb;
+}
+
+.info {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items:start;
+    justify-content:start;
+    /* background-color: #101111cb; */
+     max-width: 75rem;
+}
+
+    .info h1 {
+        color: #14ff72;
+        font-size: 2.5rem;
+        margin-bottom: 1rem;
+        position:relative;
+        margin-top: 5rem;
+        margin-left: 10rem;
+    }
+
+    .definicion {
+        color: #ffffff;
+        font-size: 1rem;
+        margin-left: 10rem;
+        margin-right: 10rem;
+        line-height: 1.5;
+        font-family: monospace;
+    }
+
+    h2 {
+        color: #14ff72;
+        font-size: 1.8rem;
+        margin-left: 10rem;
+        margin-top: 2rem;
+        margin-bottom: 2rem;
+    }
+
+    .info ul {
+        color: #ffffff;
+        font-size: 1rem;
+        margin-left: 10rem;
+        margin-right: 10rem;
+        line-height: 1.5;
+        font-family: monospace;
+    }
+    .marcado {
+         color: #14ff72;
+        font-size: 1rem;
+        margin-left: .5rem;
+        margin-right: 10rem;
+        line-height: 1.5;
+        font-family: monospace;
+       
+    }
+
+    .resaltado {
+        border-left: #14ff72 solid 3px;
+        margin-left: 10rem;
+        margin-right: 1rem;
+        margin-top: 3rem;
+        margin-bottom: 3rem;
+    }
+
+    .info ul li {
+        margin-left:0;
+        padding:0;
+    }
+
+    a{
+        color:rgb(90, 23, 129);
+        text-decoration: ;
+        padding: 1rem;
+    }
+
+</style>
