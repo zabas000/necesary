@@ -1,0 +1,159 @@
+---
+import Layout from '../../../layouts/Layout.astro';
+import Menu from '../../../components/menu.astro';
+---
+
+<Layout title="NECESSARY ">
+    <div class="contenedor">
+        <Menu></Menu>
+
+        
+        <section class="info">
+            <h1>¿Qué es el mantenimiento preventivo?</h1>
+            <p class="definicion">Es el conjunto de acciones que se realizan periódicamente para prevenir fallos en los equipos de cómputo, alargando su vida útil y asegurando su buen funcionamiento.</p>
+
+
+            <h2>Objetivos del mantenimiento preventivo</h2>
+            <ul>
+                <li> <strong></strong> Evitar daños mayores en hardware o software.</li>
+                <li> <strong></strong> Reducir costos de reparación.</li>
+                <li> <strong></strong> Mantener el rendimiento óptimo del equipo.</li>
+                <li> <strong></strong> Prolongar la vida útil de los componentes.</li>
+            </ul>
+
+            <h2>Limpieza física interna</h2>
+            <ul>
+                <li> <strong></strong> Apaga el equipo y desconéctalo.</li>
+                <li> <strong></strong> Abre la torre o carcasa.</li>
+                <li> <strong></strong> Usa aire comprimido o una brocha antiestática para eliminar el polvo</li>
+            </ul>
+            
+            <div class="resaltado">
+                <p class="marcado">
+                     Frecuencia recomendada: cada 3 a 6 meses.
+                </p>
+            </div>
+
+            <h2>Limpieza física externa</h2>
+            <ul>
+                <li> <strong></strong>limpia con paño de microfibra seco o con solución especial.</li>
+                <li> <strong></strong>usa alcohol isopropílico y un hisopo o cepillo.</li>
+                <li> <strong></strong>limpia con paño húmedo por fuera.</li>
+            </ul>
+
+            <h2>Limpieza física software</h2>
+            <ul>
+                <li><strong></strong>Elimina archivos temporales </li>
+                <li><strong></strong>Desinstala programas innecesarios..</li>
+                <li><strong></strong>Actualiza sistema operativo, antivirus y drivers.</li>
+                <li><strong></strong>Revisa el estado del disco duro con CHKDSK o CrystalDiskInfo.</li>
+            </ul>
+
+            <div class="resaltado">
+                <p class="marcado">
+                   Para eliminar archivos temporales en Windows, presiona Windows + R, escribe "temp" y elimina los archivos. Luego, haz lo mismo con "%temp%" y "prefetch". También puedes usar la herramienta de limpieza de disco (Disk Cleanup) para eliminar archivos innecesarios.
+                </p>
+            </div>
+
+            <div class="resaltado">
+                <p class="marcado">
+                   Te recomendamos que al realizar el mantenimiento separes las piezas del equipo y las nombres para evitar confuciones y no olvides usar tu pulsera antiestática para evitar descargas que puedan dañar los componentes.
+                </p>
+            </div>
+
+        </section>
+        
+    </div>
+  
+</Layout>
+
+<style>
+    .contenedor {
+  
+  display: flex;
+  flex-direction: row;
+  height: auto;
+  width: 100%;
+  margin-bottom: 8rem;
+  background-color:#101111cb ;
+}
+
+.info {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items:start;
+    justify-content:start;
+    /* background-color: #101111cb; */
+     max-width: 75rem;
+}
+
+    .info h1 {
+        color: #14ff72;
+        font-size: 2.5rem;
+        margin-bottom: 1rem;
+        position:relative;
+        margin-top: 5rem;
+        margin-left: 10rem;
+    }
+
+    .definicion {
+        color: #ffffff;
+        font-size: 1rem;
+        margin-left: 10rem;
+        margin-right: 10rem;
+        line-height: 1.5;
+        font-family: monospace;
+    }
+
+    h2 {
+        color: #14ff72;
+        font-size: 1.8rem;
+        margin-left: 10rem;
+        margin-top: 2rem;
+        margin-bottom: 2rem;
+    }
+
+    .info ul {
+        color: #ffffff;
+        font-size: 1rem;
+        margin-left: 10rem;
+        margin-right: 10rem;
+        line-height: 1.5;
+        font-family: monospace;
+    }
+    .marcado {
+         color: #14ff72;
+        font-size: 1rem;
+        margin-left: .5rem;
+        margin-right: 10rem;
+        line-height: 1.5;
+        font-family: monospace;
+       
+    }
+
+    .resaltado {
+        border-left: #14ff72 solid 3px;
+        margin-left: 10rem;
+        margin-right: 1rem;
+        margin-top: 3rem;
+        margin-bottom: 3rem;
+    }
+
+    .info ul li {
+        margin-left:0;
+        padding:0;
+    }
+
+    ul{
+       ;
+    }
+
+    a{
+        color:rgb(90, 23, 129);
+        text-decoration: ;
+        padding: 1rem;
+    }
+
+</style>
