@@ -1,0 +1,120 @@
+---
+import Layout from '../../../layouts/Layout.astro';
+import Menu from '../../../components/menu.astro';
+---
+<Layout title="NECESSARY ">
+    <div class="contenedor">
+        <Menu></Menu>
+
+        <section class="info">
+            <h1>¿Que es el direccionamiento?</h1>
+            <p class="definicion">El direccionamiento es el sistema que se usa para identificar y localizar dispositivos dentro de una red, como si cada uno tuviera su propia dirección postal.Sin direccionamiento, los datos no sabrían a dónde ir.
+            </p>
+
+            <h2>¿Qué se usa como dirección?</h2>
+            <p class="definicion">Se usa una dirección IP (Internet Protocol), que es una serie de números que identifican de forma única a cada dispositivo en la red.<br>
+            -Un ejemplo de IP es 192.168.1.10</p>
+
+            <div class="resaltado">
+                <p class="marcado">
+                IP privada: usada dentro de redes locales (ej. 192.168.1.10)<br>
+                IP pública: visible desde Internet, asignada por el proveedor (ISP).
+                </p>
+            </div>
+
+                <h2> ¿Cómo funciona el direccionamiento?</h2>
+                <ul>
+                    <li><strong>Cada dispositivo recibe una dirección IP (fija o automática).</strong></li>
+                    <li><strong>Cuando envías datos (por ejemplo, al visitar una página web), tu equipo incluye la IP de destino.</strong></li>
+                    <li><strong>Los routers leen esa IP y encaminan los datos paso a paso hasta el destino.</strong> </li>
+                    <li><strong>El equipo que recibe la información responde usando tu IP.</strong></li>
+                </ul>
+            <div class="resaltado">
+                <p class="marcado">
+                  Es como enviar una carta: necesitas saber a quién va (IP destino) y desde dónde se envía (IP de origen).
+                </p>
+            </div>
+        </section>
+        
+    </div>
+  
+</Layout>
+
+<style>
+.contenedor {
+  
+  display: flex;
+  flex-direction: row;
+  height: 100%;
+  width: 100%;
+  margin-bottom: 8rem;
+  background-color: #101111cb;
+}
+
+.info {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items:start;
+    justify-content:start;
+    /* background-color: #101111cb; */
+    max-width: 75rem;
+    margin-bottom: 10rem;
+    
+}
+
+    .info h1 {
+        color: #14ff72;
+        font-size: 2.5rem;
+        margin-bottom: 1rem;
+        position:relative;
+        margin-top: 5rem;
+        margin-left: 10rem;
+    }
+
+    .definicion {
+        color: #ffffff;
+        font-size: 1rem;
+        margin-left: 10rem;
+        margin-right: 10rem;
+        line-height: 1.5;
+        font-family: monospace;
+    }
+
+    h2 {
+        color: #14ff72;
+        font-size: 1.8rem;
+        margin-left: 10rem;
+        margin-top: 2rem;
+        margin-bottom: 2rem;
+    }
+    
+    .info ul {
+        color: #ffffff;
+        font-size: 1rem;
+        margin-left: 10rem;
+        margin-right: 10rem;
+        line-height: 1.5;
+        font-family: monospace;
+    }
+    .marcado {
+         color: #14ff72;
+        font-size: 1rem;
+        margin-left: .5rem;
+        margin-right: 10rem;
+        line-height: 1.5;
+        font-family: monospace;
+       
+    }
+
+    .resaltado {
+        border-left: #14ff72 solid 3px;
+        margin-left: 10rem;
+        margin-right: 1rem;
+        margin-top: 3rem;
+        /* margin-bottom: 19rem; */
+    }
+
+
+</style>

@@ -1,0 +1,128 @@
+---
+import Layout from '../../../layouts/Layout.astro';
+import Menu from '../../../components/menu.astro';
+---
+<Layout title="NECESSARY ">
+    <div class="contenedor">
+        <Menu></Menu>
+
+        <section class="info">
+            <h1>¿Que es una red?</h1>
+            <p class="definicion">Una red es un sistema formado por dos o más dispositivos interconectados que pueden compartir información, recursos y servicios entre ellos.</p>
+
+            
+            <h2>Tipos de Redes</h2>
+                <ul>
+                    <li><strong>LAN (Local area network):</strong> Una LAN es una red que conecta dispositivos dentro de un espacio reducido, como una casa, oficina o aula. Permite compartir archivos, impresoras e Internet de forma rápida. Es común ver LANs en empresas u hogares donde varios equipos usan un mismo router o switch.</li><br>
+                    <li><strong>WLAN (Wireless LAN):</strong> La WLAN es como una LAN, pero inalámbrica. En lugar de cables, usa Wi-Fi para conectar dispositivos como laptops y celulares a un router. Es ideal para movilidad dentro de espacios pequeños, como casas o cafeterías con red Wi-Fi.</li><br>
+                    <li><strong>MAN (Metropolitan Area Network):</strong> Una MAN conecta varias redes dentro de una misma ciudad o zona urbana. Es usada por universidades o empresas con sedes en distintos puntos de una ciudad. Puede usar fibra óptica o conexiones inalámbricas para enlazar los lugares.</li><br>
+                    <li><strong>WAN (Wide Area Network):</strong> La WAN conecta redes en lugares muy distantes, incluso en diferentes países o continentes. La más conocida es Internet. Las WAN permiten la comunicación global entre dispositivos y redes de gran tamaño.</li><br>
+                </ul>
+
+                <img src="../../../../public/imagenes/tipos-redes.png" alt="imagen de tipos de redes" >
+
+            <div class="resaltado">
+                <p class="marcado">
+                   conocer los tipos de redes es esencial para un Técnico en Sistemas, ya que le permite entender cómo se comunican los dispositivos y cómo se pueden configurar y mantener las redes en diferentes entornos. Esta habilidad es fundamental para resolver problemas de conectividad y optimizar el rendimiento de las redes.
+                </p>
+            </div>
+
+            <h2>Componentes de una red</h2>
+                <ul>
+                    <li><strong>Dispositivos o nodos:</strong> los equipos que forman parte de la red.</li>
+                    <li><strong>Medio de transmisión:</strong> cables UTP, fibra óptica o señales inalámbricas.</li>
+                    <li><strong>Dispositivos de red:</strong> Router,Switch y Punto de acceso</li>
+                    <li><strong>Protocolos de comunicación:</strong> reglas que organizan cómo se transmite la información (el más común es TCP/IP).</li>
+                    <li><strong>Direcciones IP:</strong> cada dispositivo tiene una dirección única en la red para ser identificado.</li>
+                </ul>
+        </section>
+        
+    </div>
+  
+</Layout>
+
+<style>
+.contenedor {
+  
+  display: flex;
+  flex-direction: row;
+  height: 100%;
+  width: 100%;
+  margin-bottom: 8rem;
+  background-color: #101111cb;
+}
+
+.info {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items:start;
+    justify-content:start;
+    /* background-color: #101111cb; */
+    max-width: 75rem;
+    margin-bottom: 10rem;
+    
+}
+
+    .info h1 {
+        color: #14ff72;
+        font-size: 2.5rem;
+        margin-bottom: 1rem;
+        position:relative;
+        margin-top: 5rem;
+        margin-left: 10rem;
+    }
+
+    .definicion {
+        color: #ffffff;
+        font-size: 1rem;
+        margin-left: 10rem;
+        margin-right: 10rem;
+        line-height: 1.5;
+        font-family: monospace;
+    }
+
+    h2 {
+        color: #14ff72;
+        font-size: 1.8rem;
+        margin-left: 10rem;
+        margin-top: 2rem;
+        margin-bottom: 2rem;
+    }
+    
+    img{
+        width: 70%;
+        height: auto;
+        padding-left: 10rem;
+        border-radius: 5% 5% 5% 5%;
+    }
+
+    .info ul {
+        color: #ffffff;
+        font-size: 1rem;
+        margin-left: 10rem;
+        margin-right: 10rem;
+        line-height: 1.5;
+        font-family: monospace;
+    }
+    .marcado {
+         color: #14ff72;
+        font-size: 1rem;
+        margin-left: .5rem;
+        margin-right: 10rem;
+        line-height: 1.5;
+        font-family: monospace;
+       
+    }
+
+    .resaltado {
+        border-left: #14ff72 solid 3px;
+        margin-left: 10rem;
+        margin-right: 1rem;
+        margin-top: 3rem;
+        /* margin-bottom: 19rem; */
+    }
+
+
+</style>
