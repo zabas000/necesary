@@ -1,0 +1,162 @@
+---
+import Layout from '../../../layouts/Layout.astro';
+import Menu from '../../../components/menu.astro';
+---
+
+<Layout title="NECESSARY ">
+    <div class="contenedor">
+        <Menu></Menu>
+
+        
+        <section class="info">
+            <h1>Componentes de nuestro PC</h1>
+            <p class="definicion">Un computador está formado por varios componentes que trabajan en conjunto para hacerlo funcionar. Conocer cada parte y su función es esencial para entender cómo opera, realizar mantenimiento o solucionar fallas. En esta guía encontrarás los principales componentes del PC y para qué sirve cada uno.</p>
+
+
+            <h2>1. Placa base (Motherboard)</h2>
+             <p class="definicion">Es el componente principal donde se conectan todos los demás.
+            Funciona como el centro de comunicación entre el procesador, la memoria, los discos, etc.</p>
+
+            <h2>2. Procesador (CPU)</h2>
+             <p class="definicion">Es el cerebro del computador. Se encarga de ejecutar las instrucciones de los programas, hacer cálculos y controlar los procesos. A mayor velocidad y núcleos, mayor capacidad de trabajo tendrá el equipo.</p>
+
+            <h2>3. Memoria RAM</h2>
+             <p class="definicion">Es la memoria de trabajo temporal. Guarda los datos y programas que el sistema está usando en ese momento para que funcionen más rápido. Al apagar el equipo, esta memoria se borra.</p>
+
+            <h2> 4. Disco duro (HDD) / Unidad de estado sólido (SSD)</h2>
+             <p class="definicion">Son los dispositivos de almacenamiento permanente. Aquí se guarda el sistema operativo, programas, archivos, fotos, música, etc.
+                El HDD es más lento pero tiene mayor capacidad, mientras que el SSD es más rápido y silencioso, pero suele ser más caro por GB.
+             </p>
+
+            <h2> 5. Tarjeta gráfica (GPU)</h2>
+             <p class="definicion">Procesa y muestra todos los elementos visuales en pantalla: imágenes, videos, juegos, gráficos 3D.
+                Puede estar integrada (en la placa o CPU) o ser una tarjeta dedicada (más potente).</p>
+
+            <h2> 6. Fuente de poder (PSU)</h2>
+             <p class="definicion">Convierte la corriente eléctrica de la pared (CA) en corriente continua (CC) que usan los componentes internos.
+                Distribuye energía segura y estable al procesador, discos, tarjeta gráfica y más.</p>
+
+            <h2> 7. Sistema de refrigeración</h2>
+             <p class="definicion">Está formado por ventiladores, disipadores o refrigeración líquida.
+                Evita que el equipo se caliente demasiado, lo cual podría causar daños o reducir su rendimiento.</p>
+
+            <h2>8. Perifericos</h2>
+             <p class="definicion">Son los dispositivos externos que permiten interactuar con el computador o ampliar sus funciones</p>
+            
+            <div class="resaltado">
+                <p class="marcado">
+                  Conocer los componentes de un PC es fundamental para realizar un mantenimiento adecuado, actualizar hardware o solucionar problemas. Cada parte tiene un papel crucial en el funcionamiento general del equipo.
+                </p>
+            </div>
+
+            <img src="../../public/imagenes/imagenesGaleria/practica2.jpeg" alt="3">
+
+                        <div class="resaltado">
+                <p class="marcado">
+                  Si es tu primera vez abriendo un PC, asegúrate de separar las piezas y etiquetarlas para evitar confusiones.
+                </p>
+            </div>
+           
+        </section>
+        
+    </div>
+  
+</Layout>
+
+<style>
+    .contenedor {
+  
+  display: flex;
+  flex-direction: row;
+  height: auto;
+  width: 100%;
+  margin-bottom: 8rem;
+  background-color:#101111cb ;
+}
+
+.info {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items:start;
+    justify-content:start;
+    /* background-color: #101111cb; */
+     max-width: 75rem;
+}
+
+    .info h1 {
+        color: #14ff72;
+        font-size: 2.5rem;
+        margin-bottom: 1rem;
+        position:relative;
+        margin-top: 5rem;
+        margin-left: 10rem;
+    }
+
+    .definicion {
+        color: #ffffff;
+        font-size: 1rem;
+        margin-left: 10rem;
+        margin-right: 10rem;
+        line-height: 1.5;
+        font-family: monospace;
+    }
+
+    h2 {
+        color: #14ff72;
+        font-size: 1.8rem;
+        margin-left: 10rem;
+        margin-top: 2rem;
+        margin-bottom: 2rem;
+    }
+
+    .info ul {
+        color: #ffffff;
+        font-size: 1rem;
+        margin-left: 10rem;
+        margin-right: 10rem;
+        line-height: 1.5;
+        font-family: monospace;
+    }
+    .marcado {
+         color: #14ff72;
+        font-size: 1rem;
+        margin-left: .5rem;
+        margin-right: 10rem;
+        line-height: 1.5;
+        font-family: monospace;
+       
+    }
+
+    .resaltado {
+        border-left: #14ff72 solid 3px;
+        margin-left: 10rem;
+        margin-right: 1rem;
+        margin-top: 3rem;
+        margin-bottom: 3rem;
+    }
+
+    .info ul li {
+        margin-left:0;
+        padding:0;
+    }
+
+    ul{
+       ;
+    }
+
+    a{
+        color:rgb(90, 23, 129);
+        text-decoration: ;
+        padding: 1rem;
+    }
+
+        img{
+        width: 70%;
+        height: auto;
+        padding-left: 10rem;
+        border-radius: 5% 5% 5% 5%;
+    }
+
+</style>

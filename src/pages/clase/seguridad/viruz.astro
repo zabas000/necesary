@@ -1,0 +1,124 @@
+---
+import Layout from '../../../layouts/Layout.astro';
+import Menu from '../../../components/menu.astro';
+---
+<Layout title="NECESSARY ">
+    <div class="contenedor">
+        <Menu></Menu>
+
+        <section class="info">
+            <h1>¿Qué es un virus informático?</h1>
+            <p class="definicion">Un virus informático es un tipo de software malicioso (malware) diseñado para infectar, dañar o alterar el funcionamiento normal de un equipo o sistema. Su objetivo puede ser desde simplemente molestar, hasta robar información o destruir archivos.</p>
+
+            
+            <h2>Como se propagan</h2>
+                <ul>
+                    <li><strong></strong> Archivos ejecutables</li>
+                    <li><strong></strong>Dispositivos USB</li>
+                    <li><strong></strong>Páginas web infectadas</li>
+                    <li><strong></strong>Correos electrónicos falsos (phishing)</li>
+                    <li><strong></strong>Software pirata</li>
+                </ul>
+
+                <h1 class="subtitulo"> Tipos de virus informáticos</h1>
+
+                
+
+
+            <div class="resaltado">
+                <p class="marcado">
+                   Aprender sobre software en la media técnica de Técnico en Sistemas del SENA es fundamental porque permite al estudiante comprender cómo funcionan los programas que control
+                </p>
+
+            </div>
+        </section>
+        
+    </div>
+  
+</Layout>
+
+<style>
+.contenedor {
+  
+  display: flex;
+  flex-direction: row;
+  height: 100%;
+  width: 100%;
+  margin-bottom: 8rem;
+  background-color: #101111cb;
+}
+
+.info {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items:start;
+    justify-content:start;
+    /* background-color: #101111cb; */
+     max-width: 75rem;
+}
+
+     h1 {
+        color: #14ff72;
+        font-size: 2.5rem;
+        margin-bottom: 1rem;
+        position:relative;
+        margin-top: 5rem;
+        margin-left: 10rem;
+    }
+
+    .subtitulo {
+        color: #14ff72;
+        font-size: 2.5rem;
+        margin-bottom: 1rem;
+        position:relative;
+        margin-top: 2rem;
+        margin-left: 10rem;
+    }
+
+    .definicion {
+        color: #ffffff;
+        font-size: 1rem;
+        margin-left: 10rem;
+        margin-right: 10rem;
+        line-height: 1.5;
+        font-family: monospace;
+    }
+
+    h2 {
+        color: #14ff72;
+        font-size: 1.8rem;
+        margin-left: 10rem;
+        margin-top: 2rem;
+        margin-bottom: 2rem;
+    }
+
+    .info ul {
+        color: #ffffff;
+        font-size: 1rem;
+        margin-left: 10rem;
+        margin-right: 10rem;
+        line-height: 1.5;
+        font-family: monospace;
+    }
+    .marcado {
+         color: #14ff72;
+        font-size: 1rem;
+        margin-left: .5rem;
+        margin-right: 10rem;
+        line-height: 1.5;
+        font-family: monospace;
+       
+    }
+
+    .resaltado {
+        border-left: #14ff72 solid 3px;
+        margin-left: 10rem;
+        margin-right: 1rem;
+        margin-top: 3rem;
+        margin-bottom: 19rem;
+    }
+
+
+</style>

@@ -9,57 +9,43 @@ import Menu from '../../../components/menu.astro';
 
         
         <section class="info">
-            <h1>¿Qué es el mantenimiento preventivo?</h1>
-            <p class="definicion">Es el conjunto de acciones que se realizan periódicamente para prevenir fallos en los equipos de cómputo, alargando su vida útil y asegurando su buen funcionamiento.</p>
+            <h1>¿Qué es el mantenimiento correctivo?</h1>
+            <p class="definicion">Es el proceso que se realiza cuando el equipo ya presenta una falla, con el fin de diagnosticar, reparar o reemplazar los componentes afectados para devolverle su funcionamiento normal.</p>
 
-
-            <h2>Objetivos del mantenimiento preventivo</h2>
-            <ul>
-                <li> <strong></strong> Evitar daños mayores en hardware o software.</li>
-                <li> <strong></strong> Reducir costos de reparación.</li>
-                <li> <strong></strong> Mantener el rendimiento óptimo del equipo.</li>
-                <li> <strong></strong> Prolongar la vida útil de los componentes.</li>
-            </ul>
-
-            <h2>Limpieza física interna</h2>
-            <ul>
-                <li> <strong></strong> Apaga el equipo y desconéctalo.</li>
-                <li> <strong></strong> Abre la torre o carcasa.</li>
-                <li> <strong></strong> Usa aire comprimido o una brocha antiestática para eliminar el polvo</li>
-            </ul>
-            
-            <div class="resaltado">
-                <p class="marcado">
-                     Frecuencia recomendada: cada 3 a 6 meses.
-                </p>
-            </div>
-
-            <h2>Limpieza física externa</h2>
-            <ul>
-                <li> <strong></strong>limpia con paño de microfibra seco o con solución especial.</li>
-                <li> <strong></strong>usa alcohol isopropílico y un hisopo o cepillo.</li>
-                <li> <strong></strong>limpia con paño húmedo por fuera.</li>
-            </ul>
-
-            <h2>Limpieza física software</h2>
-            <ul>
-                <li><strong></strong>Elimina archivos temporales </li>
-                <li><strong></strong>Desinstala programas innecesarios..</li>
-                <li><strong></strong>Actualiza sistema operativo, antivirus y drivers.</li>
-                <li><strong></strong>Revisa el estado del disco duro con CHKDSK o CrystalDiskInfo.</li>
-            </ul>
 
             <div class="resaltado">
                 <p class="marcado">
-                   Para eliminar archivos temporales en Windows, presiona Windows + R, escribe "temp" y elimina los archivos. Luego, haz lo mismo con "%temp%" y "prefetch". También puedes usar la herramienta de limpieza de disco (Disk Cleanup) para eliminar archivos innecesarios.
+                    Existen dos tipos de mantenimiento correctivo: el correctivo reactivo, que se realiza después de que ocurre una falla, y el correctivo preventivo, que se lleva a cabo para evitar que ocurran fallas en el futuro.
                 </p>
             </div>
 
-            <div class="resaltado">
-                <p class="marcado">
-                   Te recomendamos que al realizar el mantenimiento separes las piezas del equipo y las nombres para evitar confuciones y no olvides usar tu pulsera antiestática para evitar descargas que puedan dañar los componentes.
-                </p>
-            </div>
+            <h1 class="subtitulo">Pasos de un mantenimiento correctivo</h1>
+
+            <h2>Diagnóstico del problema</h2>
+            <ul>
+                <li> <strong></strong>Observar los síntomas: ¿no enciende? ¿se reinicia? ¿pantalla negra?.</li>
+                <li> <strong></strong>Escuchar ruidos extraños (como clics en disco duro).</li>
+                <li> <strong></strong> Ver mensajes de error en pantalla.</li>
+                <li> <strong></strong> Usar software de diagnóstico (memtest, CrystalDiskInfo, HWMonitor).</li>
+            </ul>
+
+            <h2>Pruebas de componentes</h2>
+            <ul>
+                <li> <strong>Fuente de poder:</strong> usar tester o multímetro.</li>
+                <li> <strong>Memorias RAM:</strong> intercambiar módulos o probar con MemTest86.</li>
+                <li> <strong>Disco duro:</strong> usar CHKDSK o cambiar el cable SATA.</li>
+                <li> <strong>Tarjeta gráfica:</strong>  verificar si el equipo enciende con vídeo integrado.</li>
+            </ul>
+
+            <h2> Reemplazo de componentes</h2>
+            <p class="definicion"> Cuando el componente que da la falla es del hardware es importante comprar el componente en marcas reconocidas para evitar otro problemas y si es del software debes tener una copia de seguridad para evitar la pardida de informacion</p>
+
+            <h2>Pruebas después de la reparación</h2>
+            <ul>
+                <li><strong></strong>Verifica que el equipo encienda y funcione normalmente.</li>
+                <li><strong></strong>Asegúrate de que no aparezcan errores ni ruidos anormales.</li>
+                <li><strong></strong>Haz pruebas de estrés o uso prolongado si es posible.</li>
+            </ul>
 
         </section>
         
@@ -86,15 +72,25 @@ import Menu from '../../../components/menu.astro';
     align-items:start;
     justify-content:start;
     /* background-color: #101111cb; */
-     max-width: 75rem;
+    max-width: 75rem;
+    margin-bottom: 5rem;
 }
 
-    .info h1 {
+    h1 {
         color: #14ff72;
         font-size: 2.5rem;
         margin-bottom: 1rem;
         position:relative;
         margin-top: 5rem;
+        margin-left: 10rem;
+    }
+
+    .subtitulo{
+        color: #14ff72;
+        font-size: 2.5rem;
+        margin-bottom: 1rem;
+        position:relative;
+        margin-top: 1rem;
         margin-left: 10rem;
     }
 
