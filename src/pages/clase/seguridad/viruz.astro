@@ -22,12 +22,47 @@ import Menu from '../../../components/menu.astro';
 
                 <h1 class="subtitulo"> Tipos de virus informáticos</h1>
 
-                
 
+                <h2>1. Virus de archivo</h2>
+                <p class="definicion">Es un virus que se adhiere a archivos ejecutables como .exe o .bat. Se infecta al abrir el archivo contagiado, lo que activa el virus. Una vez activo, puede dañar otros archivos, ralentizar el sistema o alterar el comportamiento del software.</p>
+
+                <h2> 2. Virus de sector de arranque (boot)</h2>
+                <p class="definicion">Este virus ataca el sector de arranque del disco duro o USB. Se infecta cuando el equipo arranca desde un medio contaminado. Al encender el computador, el virus se activa y puede impedir el inicio del sistema o corromper datos del disco.</p>
+
+                <h2> 3. Virus de macro</h2>
+                <p class="definicion">Se encuentra en documentos de Word o Excel que contienen macros. Se infecta al abrir el archivo infectado. El virus se ejecuta automáticamente y puede modificar otros documentos o propagarse por correo electrónico.</p>
+
+                <h2>4. Virus de enlace (link)</h2>
+                <p class="definicion">Este virus altera accesos directos y rutas de archivos. Se infecta al abrir un acceso directo manipulado, normalmente en memorias USB. Redirige al virus en lugar del archivo real y puede ocultar los archivos originales.</p>
+
+                <h2>5. Virus polimórfico</h2>
+                <p class="definicion">Es un virus que cambia su código cada vez que se ejecuta. Se infecta como cualquier otro, al abrir archivos maliciosos. Su efecto es similar al de otros virus, pero es muy difícil de detectar porque siempre se camufla.</p>
+
+
+                <h2>6. Virus residente</h2>
+                <p class="definicion">Se aloja en la memoria RAM del sistema y permanece activo incluso cuando cierras el archivo que lo activó. Se infecta al ejecutar un archivo contaminado. Puede interceptar procesos del sistema y actuar en segundo plano sin que lo notes.</p>
+
+
+                <h2> 7. Worm (gusano)</h2>
+                <p class="definicion">No necesita infectar archivos para propagarse. Se transmite solo a través de redes o correos electrónicos. Su objetivo es multiplicarse, lo que puede saturar el sistema y la red, causando lentitud o colapsos.</p>
+
+
+                <h2>8. Troyano</h2>
+                <p class="definicion">Parece un programa útil o inofensivo, pero esconde código malicioso. Se infecta al instalar software de fuentes dudosas. No se replica, pero abre puertas para que otros atacantes controlen tu equipo o roben tu información.</p>
+
+
+                 <h2>9. Spyware</h2>
+                <p class="definicion">Es un software espía que se instala sin permiso y recopila información personal. Se infecta al navegar por sitios inseguros o instalar programas falsos. Puede registrar contraseñas, historial de navegación y otra información privada.</p>
+
+
+                <h2>10. Ransomware</h2>
+                <p class="definicion">Bloquea tus archivos o el acceso al sistema y pide dinero para liberarlos. Se infecta al descargar archivos o correos maliciosos. Una vez activo, cifra tus documentos y muestra un mensaje exigiendo un “rescate”..</p>
+
+                  <img src="/imagenes/viruz.png" alt="imagen de tipos de redes" >
 
             <div class="resaltado">
                 <p class="marcado">
-                   Aprender sobre software en la media técnica de Técnico en Sistemas del SENA es fundamental porque permite al estudiante comprender cómo funcionan los programas que control
+                     Conocer los tipos de virus es esencial para un Técnico en Sistemas, ya que le permite identificar amenazas y aplicar medidas de seguridad adecuadas. Esta habilidad es fundamental para proteger los sistemas y datos de posibles ataques maliciosos.
                 </p>
 
             </div>
@@ -112,6 +147,12 @@ import Menu from '../../../components/menu.astro';
        
     }
 
+        img{
+        width: 70%;
+        height: auto;
+        padding-left: 10rem;
+        border-radius: 5% 5% 5% 5%;
+    }
     .resaltado {
         border-left: #14ff72 solid 3px;
         margin-left: 10rem;
