@@ -1,0 +1,145 @@
+---
+import Layout from '../../../layouts/Layout.astro';
+import Menu from '../../../components/menu.astro';
+---
+
+<Layout title="NECESSARY ">
+    <div class="contenedor">
+        <Menu></Menu>
+
+        <section class="info">
+            <h1>¿Qué es una Máquina Virtual?</h1>
+            <p class="definicion">Una máquina virtual (VM) es un entorno de ejecución completamente aislado que emula un sistema de cómputo físico. Funciona sobre un hipervisor, que se encarga de asignar recursos del hardware real (host) al entorno virtual (guest).</p>
+
+            <div class="resaltado">
+                <p class="marcado">
+                    La VM tiene su propio BIOS, disco duro virtual, memoria RAM, adaptadores de red y hasta tarjetas gráficas virtuales.
+                </p>
+
+            </div>
+            
+            <h2> Tipos de Virtualización</h2>
+            <ul>
+                <li> <strong>Virtualización completa</strong>El sistema operativo invitado no sabe que está virtualizado. Usa emulación total del hardware. Ej: VirtualBox, VMware Workstation.</li><br>
+                <li> <strong>Paravirtualización</strong>El sistema invitado es consciente de que está en una VM. Requiere modificaciones del sistema operativo. Mejora el rendimiento. Ej: Xen.</li><br>
+                <li> <strong>Virtualización a nivel de hardware (bare-metal)</strong>Corre directamente sobre el hardware físico sin sistema operativo host. Ej: VMware ESXi, Microsoft Hyper-V Server.</li><br>
+               
+            </ul>
+
+            <div class="resaltado">
+                <p class="marcado">
+                    Las maquinas virtuales tienen múltiples usos, como pruebas de software, desarrollo, formación y ejecución de sistemas operativos diferentes al del host, Pruebas de seguridad, recuperación ante desastres y ejecución de aplicaciones heredadas. 
+                </p>
+
+            </div>
+
+            <h2>Como instalar y usar VirtualBox</h2>
+            
+           <iframe width="690" height="315" src="https://www.youtube.com/embed/hZ5J-wYuIO0?si=Xs-FoJJaeOSYlnH1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+
+
+        </section>
+        
+    </div>
+  
+</Layout>
+
+<style>
+.contenedor {
+    display: flex;
+    flex-direction: row;
+    height: auto;
+    width: 100%;
+    margin-bottom: 8rem;
+    background-color:#101111cb;
+}
+
+.info {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items:start;
+    justify-content:start;
+    /* background-color: #101111cb; */
+     max-width: 75rem;
+}
+
+    .info h1 {
+        color: #14ff72;
+        font-size: 2.5rem;
+        margin-bottom: 1rem;
+        position:relative;
+        margin-top: 5rem;
+        margin-left: 10rem;
+       
+    }
+
+    .definicion {
+        color: #ffffff;
+        font-size: 1rem;
+        margin-left: 10rem;
+        margin-right: 10rem;
+        line-height: 1.5;
+        font-family: monospace;
+    }
+
+    h2 {
+        color: #14ff72;
+        font-size: 1.8rem;
+        margin-left: 10rem;
+        margin-top: 2rem;
+        margin-bottom: 2rem;
+    }
+
+    .info ul {
+        color: #ffffff;
+        font-size: 1rem;
+        margin-left: 10rem;
+        margin-right: 10rem;
+        line-height: 1.5;
+        font-family: monospace;
+    }
+    .marcado {
+         color: #14ff72;
+        font-size: 1rem;
+        margin-left: .5rem;
+        margin-right: 10rem;
+        line-height: 1.5;
+        font-family: monospace;
+       
+    }
+
+    .resaltado {
+        border-left: #14ff72 solid 3px;
+        margin-left: 10rem;
+        margin-right: 1rem;
+        margin-top: 3rem;
+        margin-bottom: 3rem;
+    }
+
+    .info ul li {
+        margin-left:0;
+        padding:0;
+    }
+
+    ul{
+       ;
+    }
+
+    a{
+        color:rgb(90, 23, 129);
+        text-decoration: ;
+        padding: 1rem;
+    }
+
+    iframe {
+        margin-left: 10rem;
+        margin-bottom: 10vh;
+        border-radius: 10px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+        
+    }
+
+</style>
