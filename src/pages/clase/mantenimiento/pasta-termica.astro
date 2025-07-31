@@ -1,0 +1,159 @@
+---
+import Layout from '../../../layouts/Layout.astro';
+import Menu from '../../../components/menu.astro';
+---
+
+<Layout title="NECESSARY ">
+    <div class="contenedor">
+        <Menu></Menu>
+
+        
+        <section class="info">
+            <h1> ¿Qué es la pasta térmica y para qué sirve?</h1>
+            <p class="definicion">La pasta térmica (también llamada grasa térmica o compuesto térmico) es una sustancia que se coloca entre el procesador (CPU) y el disipador de calor para mejorar la transferencia de calor. Sin esta pasta, el procesador puede sobrecalentarse, disminuir su rendimiento o incluso dañarse.</p>
+
+
+            <h2>⚠️ Precauciones antes de empezar</h2>
+            <ul>
+                <li> <strong></strong> Trabaja en una superficie limpia, seca y libre de estática.</li>
+                <li> <strong></strong> Usa pulsera antiestática o toca una superficie metálica para descargarte.</li>
+                <li> <strong></strong> Desconecta completamente el equipo (PC o laptop).</li>
+                <li> <strong></strong> Aportar transparencia y responsabilidad profesional del trabajo técnico.</li>
+                <li> <strong></strong> No toques la parte dorada del procesador ni la del disipador.</li>
+            </ul>
+
+            <h2> Pasos para cambiar la pasta térmica</h2>
+            <ul>
+                <li> <strong>1. Apaga el equipo y desconéctalo</strong> Trabaja en una superficie limpia, seca y libre de estática.</li>
+                <li> <strong>2. Abre el gabinete o carcasa</strong>Usa el destornillador para quitar los tornillos del panel lateral (en PC) o retira cuidadosamente la tapa del disipador (en laptops).</li>
+                <li> <strong>3. Retira el disipador</strong> Desconecta el ventilador del procesador si es necesario. Luego, afloja los tornillos del disipador en forma de cruz (diagonal) para evitar presión desigual. Levanta suavemente el disipador.</li>
+                <li> <strong>4. Limpia la pasta térmica vieja</strong> Humedece ligeramente el paño o papel con alcohol isopropílico y limpia con cuidado la superficie del procesador y la base del disipador. Asegúrate de dejar ambas superficies completamente limpias y secas.</li>
+                <li> <strong>5. Aplica la nueva pasta térmica</strong> Coloca una pequeña gota del tamaño de un grano de arroz o una lenteja en el centro del procesador.
+                Evita aplicar demasiado, ya que el exceso puede escurrirse y causar problemas.</li>
+                <li> <strong>6. Coloca nuevamente el disipador</strong> No toques la parte dorada del procesador ni la del disipador.</li>
+            </ul>
+
+            <div class="resaltado">
+                <p class="marcado">
+                    Cambiar la pasta térmica es una tarea sencilla pero crucial para mantener el rendimiento y la salud de tu equipo. Recuerda hacerlo cada 1-2 años o cuando notes temperaturas inusualmente altas. 
+                </p>
+            </div>
+
+            <h2>Ejemplo de informe tecnico</h2>
+            <img src="/imagenes/pasta-termica.jpg" alt="informe tecnico" >
+
+
+           
+        </section>
+        
+    </div>
+  
+</Layout>
+
+<style>
+    .contenedor {
+  
+  display: flex;
+  flex-direction: row;
+  height: auto;
+  width: 100%;
+  margin-bottom: 8rem;
+  background-color:#101111cb ;
+}
+
+.info {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items:start;
+    justify-content:start;
+    /* background-color: #101111cb; */
+    max-width: 75rem;
+    margin-bottom: 5rem;
+}
+
+    h1 {
+        color: #14ff72;
+        font-size: 2.5rem;
+        margin-bottom: 1rem;
+        position:relative;
+        margin-top: 5rem;
+        margin-left: 10rem;
+    }
+
+    .subtitulo{
+        color: #14ff72;
+        font-size: 2.5rem;
+        margin-bottom: 1rem;
+        position:relative;
+        margin-top: 1rem;
+        margin-left: 10rem;
+    }
+
+    .definicion {
+        color: #ffffff;
+        font-size: 1rem;
+        margin-left: 10rem;
+        margin-right: 10rem;
+        line-height: 1.5;
+        font-family: monospace;
+    }
+
+    h2 {
+        color: #14ff72;
+        font-size: 1.8rem;
+        margin-left: 10rem;
+        margin-top: 2rem;
+        margin-bottom: 2rem;
+    }
+
+    img{
+        width: 70%;
+        height: auto;
+        padding-left: 10rem;
+        
+    }
+
+    .info ul {
+        color: #ffffff;
+        font-size: 1rem;
+        margin-left: 10rem;
+        margin-right: 10rem;
+        line-height: 1.5;
+        font-family: monospace;
+    }
+    .marcado {
+         color: #14ff72;
+        font-size: 1rem;
+        margin-left: .5rem;
+        margin-right: 10rem;
+        line-height: 1.5;
+        font-family: monospace;
+       
+    }
+
+    .resaltado {
+        border-left: #14ff72 solid 3px;
+        margin-left: 10rem;
+        margin-right: 1rem;
+        margin-top: 3rem;
+        margin-bottom: 3rem;
+    }
+
+    .info ul li {
+        margin-left:0;
+        padding:0;
+    }
+
+    ul{
+       ;
+    }
+
+    a{
+        color:rgb(90, 23, 129);
+        text-decoration: ;
+        padding: 1rem;
+    }
+
+</style>

@@ -1,0 +1,147 @@
+---
+import Layout from '../../../layouts/Layout.astro';
+import Menu from '../../../components/menu.astro';
+---
+
+<Layout title="NECESSARY ">
+    <div class="contenedor">
+        <Menu></Menu>
+
+        
+        <section class="info">
+            <h1> ¿Qué es un Informe Técnico de Mantenimiento?</h1>
+            <p class="definicion">Un Informe Técnico de Mantenimiento es un documento formal donde el técnico registra todas las acciones realizadas al intervenir un equipo, ya sea en un mantenimiento preventivo, correctivo o predictivo.<br>
+            Este informe actúa como evidencia técnica del trabajo realizado y como un registro histórico del estado de los equipos.</p>
+
+
+            <h2>¿Para qué sirve?</h2>
+            <ul>
+                <li> <strong></strong> Dejar constancia del estado del equipo antes y después del mantenimiento.</li>
+                <li> <strong></strong> Informar al usuario o supervisor sobre las fallas detectadas y corregidas.</li>
+                <li> <strong></strong> Detallar las actividades realizadas y los componentes reemplazados o reparados.</li>
+                <li> <strong></strong> Aportar transparencia y responsabilidad profesional del trabajo técnico.</li>
+                <li> <strong></strong> Brindar recomendaciones de uso y cuidado al usuario final.</li>
+            </ul>
+
+            <h2>Ejemplo de informe tecnico</h2>
+            <img src="/imagenes/informe-tecnico.jpg" alt="informe tecnico" >
+
+            <div class="resaltado">
+                <p class="marcado">
+                    Un Informe Técnico de Mantenimiento es esencial para documentar el estado de los equipos, las acciones realizadas y las recomendaciones para su uso. Este informe es una herramienta clave para la gestión del mantenimiento y la mejora continua de los procesos técnicos.
+                </p>
+            </div>
+           
+        </section>
+        
+    </div>
+  
+</Layout>
+
+<style>
+    .contenedor {
+  
+  display: flex;
+  flex-direction: row;
+  height: auto;
+  width: 100%;
+  margin-bottom: 8rem;
+  background-color:#101111cb ;
+}
+
+.info {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items:start;
+    justify-content:start;
+    /* background-color: #101111cb; */
+    max-width: 75rem;
+    margin-bottom: 5rem;
+}
+
+    h1 {
+        color: #14ff72;
+        font-size: 2.5rem;
+        margin-bottom: 1rem;
+        position:relative;
+        margin-top: 5rem;
+        margin-left: 10rem;
+    }
+
+    .subtitulo{
+        color: #14ff72;
+        font-size: 2.5rem;
+        margin-bottom: 1rem;
+        position:relative;
+        margin-top: 1rem;
+        margin-left: 10rem;
+    }
+
+    .definicion {
+        color: #ffffff;
+        font-size: 1rem;
+        margin-left: 10rem;
+        margin-right: 10rem;
+        line-height: 1.5;
+        font-family: monospace;
+    }
+
+    h2 {
+        color: #14ff72;
+        font-size: 1.8rem;
+        margin-left: 10rem;
+        margin-top: 2rem;
+        margin-bottom: 2rem;
+    }
+
+    img{
+        width: 70%;
+        height: auto;
+        padding-left: 10rem;
+        border-radius: 5% 5% 5% 5%;
+    }
+
+    .info ul {
+        color: #ffffff;
+        font-size: 1rem;
+        margin-left: 10rem;
+        margin-right: 10rem;
+        line-height: 1.5;
+        font-family: monospace;
+    }
+    .marcado {
+         color: #14ff72;
+        font-size: 1rem;
+        margin-left: .5rem;
+        margin-right: 10rem;
+        line-height: 1.5;
+        font-family: monospace;
+       
+    }
+
+    .resaltado {
+        border-left: #14ff72 solid 3px;
+        margin-left: 10rem;
+        margin-right: 1rem;
+        margin-top: 3rem;
+        margin-bottom: 3rem;
+    }
+
+    .info ul li {
+        margin-left:0;
+        padding:0;
+    }
+
+    ul{
+       ;
+    }
+
+    a{
+        color:rgb(90, 23, 129);
+        text-decoration: ;
+        padding: 1rem;
+    }
+
+</style>
