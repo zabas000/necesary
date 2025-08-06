@@ -31,23 +31,44 @@ import Menu from '../../../components/menu.astro';
 
             <h2>Desde la pagina del fabricante</h2>
             <ul>
-                <li> <strong></strong>Clic derecho en el botón de Inicio → Administrador de dispositivos.</li>
-                <li> <strong></strong>Los dispositivos con errores aparecerán con un símbolo amarillo (¡).</li>
-                <li> <strong></strong>Usar el adaptador Wi-Fi o Ethernet para conectarse a Internet.</li><br>
-            
+                <li> <strong></strong>Busca el modelo exacto del equipo (está en la etiqueta del portátil).</li>
+                <li> <strong></strong>Entra a la página oficial del fabricante.</li>
+                <li> <strong></strong>Ve a la sección de Soporte / Controladores / Descargas.</li>
+                <li> <strong></strong>Descarga los drivers uno por uno: Chipset, Video, Red LAN / Wi-Fi ,Sonido, Touchpad (si aplica), BIOS (opcional)</li><br>
+              
             </ul>
 
             <div class="resaltado">
                 <p class="marcado">
-                    Las maquinas virtuales tienen múltiples usos, como pruebas de software, desarrollo, formación y ejecución de sistemas operativos diferentes al del host, Pruebas de seguridad, recuperación ante desastres y ejecución de aplicaciones heredadas. 
+                    Consejo: Descarga los drivers en una memoria USB antes de formatear el equipo y si tienes algun problenma con el touchpad (en portatiles) a veces se soluciona actualizando la microsoft store
                 </p>
-
             </div>
 
-            <h2>Como instalar y usar VirtualBox</h2>
-            
-           <iframe width="690" height="315" src="https://www.youtube.com/embed/hZ5J-wYuIO0?si=Xs-FoJJaeOSYlnH1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            <h2>Usando el Administrador de dispositivos</h2>
 
+            <img src="/imagenes/controlador.png" alt="" >
+            <ul>
+                <li> <strong></strong>Clic derecho sobre el dispositivo sin controlador (⚠️).</li>
+                <li> <strong></strong>Selecciona Actualizar controlador.</li>
+                <li> <strong></strong>Elegir: “Buscar automáticamente” (si tienes Internet). O “Buscar software en mi equipo” (si ya descargaste el driver).</li>
+                <li> <strong></strong>Descarga los drivers uno por uno: Chipset, Video, Red LAN / Wi-Fi ,Sonido, Touchpad (si aplica), BIOS (opcional)</li><br>
+              
+            </ul>
+
+            <h2> Paquetes automáticos (con precaución)</h2>
+            <ul>
+                <li> <strong>DriverPack Solution</strong>Instala automáticamente los drivers detectados</li>
+                <li> <strong>SDI (Snappy Driver)</strong>Permite más control técnico y backup offline</li>
+                <li> <strong>SlimDrivers / IObit</strong>Usar solo en pruebas o con conocimiento previo</li>
+                <li> <strong>DriverBooster</strong>Personalmente te recomendamos este ya que es el que solemos usar </li><br>
+              
+            </ul>
+
+            <div class="resaltado">
+                <p class="marcado">
+                    Consejo: Ten cuidado con los paquetes automáticos, ya que pueden instalar drivers incorrectos o versiones no oficiales. Siempre revisa qué se está instalando y crea un punto de restauración antes de usar estos programas.
+                </p>
+            </div>
 
 
         </section>
@@ -145,12 +166,14 @@ import Menu from '../../../components/menu.astro';
         padding: 1rem;
     }
 
-    iframe {
-        margin-left: 10rem;
-        margin-bottom: 10vh;
-        border-radius: 10px;
-        box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-        
+    img{
+        width: 60%;
+        height: auto;
+        padding-left: 10rem;
+        border-radius: 5% 5% 5% 5%;
+        margin-bottom: 1rem;
+
     }
+
 
 </style>
