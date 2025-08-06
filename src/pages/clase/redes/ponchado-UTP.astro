@@ -7,36 +7,40 @@ import Menu from '../../../components/menu.astro';
         <Menu></Menu>
 
         <section class="info">
-            <h1>¿Qué son las normas TIA/EIA?</h1>
-            <p class="definicion">Son estándares creados por dos organizaciones:<br><br>
+            <h1>¿Qué es el ponchado?</h1>
+            <p class="definicion">El ponchado es el proceso de colocar conectores RJ45 en los extremos de un cable UTP (cable de red), permitiendo su conexión a dispositivos como routers, switches o computadoras.</p>
 
-              <strong>-TIA (Telecommunications Industry Association)<br></strong>
-              <strong> -EIA (Electronic Industries Alliance)<br><br></strong>
+            <h2>Norma T568A y T568B</h2>
+            <p class="definicion">La norma T568 es un estándar definido por las organizaciones TIA/EIA (Telecommunications Industry Association / Electronic Industries Alliance) para el ordenado de los cables de red UTP dentro de los conectores RJ45.<br><br>
 
-                Estas normas aseguran que las redes de cableado estructurado funcionen correctamente, sean seguras, ordenadas y fáciles de mantener. Son aplicadas principalmente en instalaciones de voz, datos e internet.
-            </p>
+            Esta norma asegura que las conexiones de red funcionen correctamente y de forma compatible entre dispositivos, organizando los 8 hilos del cable UTP según un código de colores específico.</p><br>
 
-            <h2>¿Qué se usa como dirección?</h2>
-            <p class="definicion">Se usa una dirección IP (Internet Protocol), que es una serie de números que identifican de forma única a cada dispositivo en la red.<br>
-            -Un ejemplo de IP es 192.168.1.10</p>
+                  <img src="/imagenes/norma-ponchado.webp" alt="" >
 
             <div class="resaltado">
                 <p class="marcado">
-                IP privada: usada dentro de redes locales (ej. 192.168.1.10)<br>
-                IP pública: visible desde Internet, asignada por el proveedor (ISP).
+                La T568A-A o T568B-B  Sirve para conectar dispositivos diferentes, como: PC a switch ,PC a router<br><br>
+                La T568A-B o T568B-A  Sirve para conectar dispositivos iguales, como: Switch a switch ,Router a router
                 </p>
             </div>
 
-                <h2> ¿Cómo funciona el direccionamiento?</h2>
+                <h2>Como hacer el ponchado</h2>
                 <ul>
-                    <li><strong>Cada dispositivo recibe una dirección IP (fija o automática).</strong></li>
-                    <li><strong>Cuando envías datos (por ejemplo, al visitar una página web), tu equipo incluye la IP de destino.</strong></li>
-                    <li><strong>Los routers leen esa IP y encaminan los datos paso a paso hasta el destino.</strong> </li>
-                    <li><strong>El equipo que recibe la información responde usando tu IP.</strong></li>
+                    <li><strong></strong>Corta el cable recto</li>
+                    <li><strong></strong>Pela el recubrimiento</li>
+                    <li><strong>Desenreda los pares:</strong>  Separa cuidadosamente los 4 pares trenzados.</li>
+                    <li><strong></strong>Organiza los hilos según el estándar elegido</li>
+                    <li><strong></strong>Corta los hilos al mismo largo</li>
+                    <li><strong></strong>Inserta los hilos en el conector RJ45</li>
+                     <li><strong></strong>Poncha el conector</li><br>
                 </ul>
+
+                     <img src="/imagenes/ponchado.webp" alt="" >
+
+
             <div class="resaltado">
                 <p class="marcado">
-                  Es como enviar una carta: necesitas saber a quién va (IP destino) y desde dónde se envía (IP de origen).
+                    El ponchado es una habilidad esencial para un Técnico en Sistemas, ya que permite crear cables de red personalizados y asegurar conexiones confiables entre dispositivos. Dominar el ponchado garantiza un rendimiento óptimo en redes informáticas.
                 </p>
             </div>
         </section>
@@ -119,6 +123,15 @@ import Menu from '../../../components/menu.astro';
         margin-right: 1rem;
         margin-top: 3rem;
         /* margin-bottom: 19rem; */
+    }
+
+        img{
+        width:70%;
+        height: auto;
+        padding-left: 10rem;
+        border-radius: 5% 5% 5% 5%;
+        margin-bottom: 1rem;
+
     }
 
 

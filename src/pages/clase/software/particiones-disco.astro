@@ -14,21 +14,16 @@ import Menu from '../../../components/menu.astro';
             <h2>¿Es igual a Desfragmentar</h2>
             <p class="definicion">Particionar y desfragmentar son diferentes. Particionar crea secciones en el disco para organizar datos, mientras que desfragmentar reorganiza los datos dentro de una partición para que estén más juntos y el acceso sea más rápido. Al desfragmentar el disco este puede mejorar la velocidad </p>
 
-            <div class="resaltado">
-                <p class="marcado">
-                   Aprender sobre software en la media técnica de Técnico en Sistemas del SENA es fundamental porque permite al estudiante comprender cómo funcionan los programas que controlan y gestionan los equipos informáticos. Este conocimiento es clave para instalar, configurar y mantener sistemas operativos, aplicaciones y herramientas de seguridad. Además, facilita el aprendizaje de programación y la administración de redes, lo que aumenta las oportunidades laborales y mejora la capacidad para ofrecer soluciones tecnológicas en distintos entornos.
-                </p>
-
-            </div>
-
             <h2>Como particionar un disco en Windows</h2>
             <ul>
                 <li> <strong>Abre Administrador de discos</strong> Presiona Windows + X → elige administrador de disco  </li>
                 <li> <strong>Seleccionar el disco</strong> Haz clic sobre el disco que quieres dividir</li>
                 <li> <strong>Reducir volumen</strong> Elige reducir volumen...Luego ingresa cuanto espacio quieres liberar (en MB)</li>
                 <li> <strong>Crear nueva partición</strong> Verás espacio “no asignado”. Haz clic derecho → Nuevo volumen simple...</li>
-                <li> <strong>Sigue el asistente</strong>  asigna letra, nombre y formato (NTFS recomendado). </li>
-            </ul>\
+                <li> <strong>Sigue el asistente</strong>  asigna letra, nombre y formato (NTFS recomendado). </li><br>
+            </ul>
+
+             <img src="/imagenes/disco.png" alt="" >
 
                         <div class="resaltado">
                 <p class="marcado">
@@ -130,6 +125,15 @@ import Menu from '../../../components/menu.astro';
         color:rgb(90, 23, 129);
         text-decoration: ;
         padding: 1rem;
+    }
+
+    img{
+        width: 60%;
+        height: auto;
+        padding-left: 10rem;
+        border-radius: 5% 5% 5% 5%;
+        margin-bottom: 1rem;
+
     }
 
 </style>
