@@ -1,0 +1,157 @@
+---
+import Layout from '../../../layouts/Layout.astro';
+import Menu from '../../../components/menu.astro';
+---
+
+<Layout title="NECESSARY ">
+    <div class="contenedor">
+        <Menu></Menu>
+
+        <section class="info">
+            <h1>¿Qué es una copia de seguridad?</h1>
+            <p class="definicion">Una copia de seguridad (o backup) es una duplicación de archivos importantes que se guarda en un lugar diferente al original, con el fin de recuperarlos en caso de fallos, errores, virus, robo o pérdida de información.</p>
+
+            <h2>¿Por qué es importante hacer backups?</h2>
+            <ul>
+                <li> <strong></strong>Evita la pérdida de documentos, fotos, configuraciones o sistemas completos.</li>
+                <li> <strong></strong>Permite restaurar un sistema rápidamente tras un formateo.</li>
+                <li> <strong></strong>Protege contra ataques de virus o ransomware.</li>
+                <li> <strong></strong>Es una buena práctica en mantenimiento preventivo.</li>
+               
+            </ul>
+
+
+               <h2>Tipos de copias de seguridad</h2>
+            <img src="/imagenes/copias-seguridad.webp" alt="" >
+
+            <ul>
+                <li> <strong>Completa</strong> Copia todo el contenido seleccionado.	</li>
+                <li> <strong>Incremental</strong> Copia solo lo que cambió desde el último backup.</li>
+                <li> <strong>Diferencial</strong> Copia cambios desde la última copia completa.	</li>
+                <li> <strong>Imagen del sistema</strong> Copia todo el disco, incluyendo sistema operativo y programas.	</li>
+               
+            </ul>
+
+             <h2>¿Qué archivos se deben respaldar?</h2>
+              <p class="definicion">los archivos que deberias respaldar son: Documentos, archivos multimedia, Bases de datos o proyectos técnicos, informacion critica...  </p>
+
+              <h1>Medios donde guardar las copias</h1>
+            <img src="/imagenes/medios.webp" alt="" >
+
+            <div class="resaltado">
+                <p class="marcado">
+                    personalmente te recomendamos usar un disco duro externo o una nube como google drive o mega, ya que son los mas seguros y faciles de usar
+                </p>
+
+            </div>
+            
+
+
+
+
+        </section>
+        
+    </div>
+  
+</Layout>
+
+<style>
+.contenedor {
+    display: flex;
+    flex-direction: row;
+    height: auto;
+    width: 100%;
+    margin-bottom: 8rem;
+    background-color:#101111cb;
+}
+
+.info {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items:start;
+    justify-content:start;
+    /* background-color: #101111cb; */
+     max-width: 75rem;
+}
+
+    .info h1 {
+        color: #14ff72;
+        font-size: 2.5rem;
+        margin-bottom: 1rem;
+        position:relative;
+        margin-top: 5rem;
+        margin-left: 10rem;
+       
+    }
+
+    .definicion {
+        color: #ffffff;
+        font-size: 1rem;
+        margin-left: 10rem;
+        margin-right: 10rem;
+        line-height: 1.5;
+        font-family: monospace;
+    }
+
+    h2 {
+        color: #14ff72;
+        font-size: 1.8rem;
+        margin-left: 10rem;
+        margin-top: 2rem;
+        margin-bottom: 2rem;
+    }
+
+    .info ul {
+        color: #ffffff;
+        font-size: 1rem;
+        margin-left: 10rem;
+        margin-right: 10rem;
+        line-height: 1.5;
+        font-family: monospace;
+    }
+    .marcado {
+         color: #14ff72;
+        font-size: 1rem;
+        margin-left: .5rem;
+        margin-right: 10rem;
+        line-height: 1.5;
+        font-family: monospace;
+       
+    }
+
+    .resaltado {
+        border-left: #14ff72 solid 3px;
+        margin-left: 10rem;
+        margin-right: 1rem;
+        margin-top: 3rem;
+        margin-bottom: 3rem;
+    }
+
+    .info ul li {
+        margin-left:0;
+        padding:0;
+    }
+
+    ul{
+       ;
+    }
+
+    a{
+        color:rgb(90, 23, 129);
+        text-decoration: ;
+        padding: 1rem;
+    }
+
+    img{
+        width: 60%;
+        height: auto;
+        padding-left: 10rem;
+        border-radius: 5% 5% 5% 5%;
+        margin-bottom: 1rem;
+
+    }
+
+
+</style>
