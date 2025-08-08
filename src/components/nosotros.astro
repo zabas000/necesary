@@ -1,0 +1,40 @@
+---
+import '@fontsource-variable/nabla';
+import Layout from '../layouts/Layout.astro';
+import VerMas from '../components/VerMas.astro';
+---
+
+<section class="contenedor">
+<div class="circulo">
+    <img src="/imagenes/nosotros.png" alt="Nosotros">
+</div>
+<div class="circulo">
+    <img src="/imagenes/nosotros2.png" alt="Nosotros">
+</div>
+<div class="circulo">
+    <img src="/imagenes/nosotros3.png" alt="Nosotros">
+</div>
+
+</section>
+
+<style>
+    .contenedor {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        background-color: #449494cb;
+    }
+
+    .circulo {
+        width: 300px;
+        height: 300px;
+        border-radius: 50%;
+        margin: 0 20px;
+        overflow: hidden;
+        box-shadow: 0 4px 8px rgba(161, 23, 23, 0.2);
+        background-color: aqua;
+    }
+    
+</style>

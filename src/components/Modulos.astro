@@ -4,92 +4,71 @@ import Layout from '../layouts/Layout.astro';
 import VerMas from '../components/VerMas.astro';
 ---
 <section class="slider">
-
-
-	<div class="list">
-
-		<div class="item">
-			<img src="/imagenes/hadwareee.jpg" alt="">
-
-			<div class="content">
-				<p class="title">fundamentos del</d>
-				<p class="type">SOFTWARE</>
-				<p class="description-oscuro"> <!--esta debe ser negro porque el fondo es muy claro  -->
-				
-				</d>
-				<div class="button">
+    <div class="list">
+        <div class="item">
+            <img src="/imagenes/hadwareee.jpg" alt="">
+            <div class="content">
+                <div class="title">fundamentos del</div>
+                <div class="type">SOFTWARE</div>
+                <div class="description-oscuro"></div>
+                <div class="button">
                     <VerMas enlace="/software"/>
-				</div>
-			</div>
-		</div>
-
-		<div class="item">
-			<img src="/imagenes/redes.png" alt="">
-
-			<div class="content">
-				<div class="title">REDES Y CONECTIVIDAD</div>
-				<div class="type">FUNDAMENTOS</div>
-				<div class="description">
-					Conéctate al mundo de las redes: conoce los elementos clave para crear y gestionar conexiones seguras y eficientes.
-				</div>
-				<div class="button">
+                </div>
+            </div>
+        </div>
+        <div class="item">
+            <img src="/imagenes/redes.png" alt="">
+            <div class="content">
+                <div class="title">REDES Y CONECTIVIDAD</div>
+                <div class="type">FUNDAMENTOS</div>
+                <div class="description">
+                    Conéctate al mundo de las redes: conoce los elementos clave para crear y gestionar conexiones seguras y eficientes.
+                </div>
+                <div class="button">
                     <VerMas enlace="/redes" />
-				</div>
-			</div>
-		</div>
-
-		<div class="item">
-			<img src="/imagenes/mantenimiento.png" alt="">
-
-			<div class="content">
-				<div class="title">MANTENIMIENTO DE </div>
-				<div class="type">EQUIPOS</div>
-				<div class="description-oscuro" > <!--esta debe ser negro porque el fondo es muy claro  -->
-					Optimiza el rendimiento y extiende la vida útil de los sistemas. Aprende a diagnosticar, reparar y prevenir fallos.
-				</div>
-				<div class="button">
-					<VerMas enlace="/mantenimiento" />
-				</div>
-			</div>
-		</div>
-
-		<div class="item">
-			<img src="/imagenes/privacidad.jpg" alt="">
-
-			<div class="content">
-				<div class="title">SEGURIDAD INFORMATICA </div>
-				<div class="type">BASICA</div>
-				<div class="description">
-					Protege la información y los sistemas de amenazas. Domina los principios de seguridad para un entorno digital confiable.
-				</div>
-				<div class="button">
-					<VerMas enlace="/seguridad" />
-				</div>
-			</div>
-		</div>
-
-	</div>
-
-
-	<div class="thumbnail">
-		<div class="item">
-		</div>
-	</div>
-
-
-	<div class="nextPrevArrows">
-		<button class="prev"> ⤎ </button>
-		<button class="next"> ⤏ </button>
+                </div>
+            </div>
+        </div>
+        <div class="item">
+            <img src="/imagenes/mantenimiento.png" alt="">
+            <div class="content">
+                <div class="title">MANTENIMIENTO DE </div>
+                <div class="type">EQUIPOS</div>
+                <div class="description-oscuro">
+                    Optimiza el rendimiento y extiende la vida útil de los sistemas. Aprende a diagnosticar, reparar y prevenir fallos.
+                </div>
+                <div class="button">
+                    <VerMas enlace="/mantenimiento" />
+                </div>
+            </div>
+        </div>
+        <div class="item">
+            <img src="/imagenes/privacidad.jpg" alt="">
+            <div class="content">
+                <div class="title">SEGURIDAD INFORMATICA </div>
+                <div class="type">BASICA</div>
+                <div class="description">
+                    Protege la información y los sistemas de amenazas. Domina los principios de seguridad para un entorno digital confiable.
+                </div>
+                <div class="button">
+                    <VerMas enlace="/seguridad" />
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="thumbnail">
+        <div class="item"></div>
+    </div>
+    <div class="nextPrevArrows">
+        <button class="prev"> ⤎ </button>
+        <button class="next"> ⤏ </button>
         <i class="fa-solid fa-arrow-right"></i>
-	</div>
-
-
+    </div>
 </section>
 
-
 <script>
-let nextBtn = document.querySelector('.next')
-let prevBtn = document.querySelector('.prev')
+let nextBtn = document.querySelector('.next') as HTMLButtonElement | null
+let prevBtn = document.querySelector('.prev') as HTMLButtonElement | null
 
 let slider = document.querySelector('.slider')
 let sliderList = slider?.querySelector('.slider .list')
@@ -102,19 +81,19 @@ if (thumbnailItems && thumbnailItems.length > 0) {
 
 // Function for next button 
 if (nextBtn) {
-    (nextBtn as HTMLButtonElement).onclick = function() {
+    (nextBtn).onclick = function() {
         moveSlider('next')
     }
 }
 
 // Function for prev button 
 if (prevBtn) {
-    (prevBtn as HTMLButtonElement).onclick = function() {
+    (prevBtn).onclick = function() {
         moveSlider('prev')
     }
 }
 
-function moveSlider(direction: 'next' | 'prev') {
+function moveSlider(direction) {
     let sliderItems = sliderList?.querySelectorAll('.item')
     let thumbnailItems = document.querySelectorAll('.thumbnail .item')
     
@@ -135,24 +114,22 @@ function moveSlider(direction: 'next' | 'prev') {
             } else {
                 slider?.classList.remove('prev')
             }
-        }, {once: true}) // Remove the event listener after it's triggered once
+        }, {once: true})
     }
 }
 </script>
 
-
-
- <style>
-	.slider{
-    min-height:88vh;
-    /* max-width:90vh ; */
-    width: 90%;
+<style>
+.slider{
+    min-height: 89vh;
+    width: 100%;             /* Más ancho, pero no 100% */
+    max-width: 100%;      /* Limita el ancho máximo */
     overflow: hidden;
-    position: absolute;
-	margin-top: -28px;
-    margin-bottom: 40%;
-    border-radius:30px  ;
-    
+    position: relative;
+    margin: 10px auto;      /* Centrado horizontal */
+    border-radius: 30px;
+    box-sizing: border-box;
+    background: red;
 }
 
 .description{
@@ -165,33 +142,33 @@ function moveSlider(direction: 'next' | 'prev') {
     font-size: 25px;
     color: #797373;    
 }
+
 .slider .list .item{
     width: 100%;
     height: 100%;
     position: absolute;
     inset: 0 0 0 0;
 }
+
 .slider .list .item img{
     width: 100%;
     height: 100%;
     object-fit: cover;
     position: relative;
     border-radius: 30px;
-
 }
+
 .slider .list .item .content{
     position: absolute;
     top: 20%;
     width: 1140px;
     max-width: 80%;
     left: 50%;
-    /* background-color: #6c20a6; */
     transform: translateX(-50%);
     padding-right: 20%;
     box-sizing: border-box;
     color: #fff;
     text-shadow: 0 5px 10px #0004;
-    
 }
 
 .slider .list .item .content .title,
@@ -200,7 +177,6 @@ function moveSlider(direction: 'next' | 'prev') {
     font-weight: bold;
     line-height: 1.1em;
 }
-
 
 .slider .list .item .type{
     color: #14ff72cb;
@@ -225,20 +201,6 @@ function moveSlider(direction: 'next' | 'prev') {
     border-radius: 30px 30px;
 } 
 
-
-/* .slider .list .item .button button:hover{
-    letter-spacing: 10px;
-} */
-
-/* .slider .list .item .button button:nth-child(2){
-    background-color: transparent;
-    border: 30px solid #fff;
-    color: #eee;
-} */
-
-
-
-/* nextPrevArrows Section  */
 .nextPrevArrows{
     position: absolute;
     top: 90%;
@@ -272,12 +234,11 @@ function moveSlider(direction: 'next' | 'prev') {
     z-index: 1;
 }
 
-
 /* animation text in first item */
 .slider .list .item:nth-child(1) .content .title,
 .slider .list .item:nth-child(1) .content .type,
 .slider .list .item:nth-child(1) .content .description,
-.slider .list .item:nth-child(1) .content .buttons
+.slider .list .item:nth-child(1) .content .button
 {
     transform: translateY(50px);
     filter: blur(20px);
@@ -300,12 +261,9 @@ function moveSlider(direction: 'next' | 'prev') {
 .slider .list .item:nth-child(1) .content .description{
     animation-delay: 0.8s !important;
 }
-.slider .list .item:nth-child(1) .content .buttons{
+.slider .list .item:nth-child(1) .content .button{
     animation-delay: 1s !important;
 }
-
-
-
 
 /* Animation for next button click */
 .slider.next .list .item:nth-child(1) img{
@@ -328,10 +286,6 @@ function moveSlider(direction: 'next' | 'prev') {
     }
 }
 
-/* .slider.next .thumbnail .item:nth-last-child(1){
-    overflow: hidden;
-    animation: showThumbnail .5s linear 1 forwards;
-} */
 .slider.prev .list .item img{
     z-index: 100;
 }
@@ -345,7 +299,6 @@ function moveSlider(direction: 'next' | 'prev') {
         transform: translateX(150px);
     }
 }
-
 
 /* Animation for prev button click */
 .slider.prev .list .item:nth-child(2){
@@ -381,7 +334,7 @@ function moveSlider(direction: 'next' | 'prev') {
 .slider.prev .list .item:nth-child(2) .content .title,
 .slider.prev .list .item:nth-child(2) .content .type,
 .slider.prev .list .item:nth-child(2) .content .description,
-.slider.prev .list .item:nth-child(2) .content .buttons
+.slider.prev .list .item:nth-child(2) .content .button
 {
     animation: contentOut 1.5s linear 1 forwards!important;
 }
@@ -401,5 +354,4 @@ function moveSlider(direction: 'next' | 'prev') {
         font-size: 50px;
     }
 }
-
- </style>
+</style>

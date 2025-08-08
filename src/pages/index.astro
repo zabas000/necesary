@@ -9,87 +9,69 @@ import Preguntas from '../components/preguntas.astro';
 
 <Layout title="NECESSARY">
 
-	<!--encabezado y presentacion -->
-	<section class="encabezado">
-		<Header></Header>
+	<section class="header">
+		<Header />
+	</section>
+	<section class="texto">
+		<h1 class="inicio-mensaje">¡Conviértete en un Experto en Sistemas <br> Todo lo que Necesitas Saber!</h1>
+
 	</section>
 
-	<section class="inicio-text">
-		<h1 id="inicio" class="inicio-mensaje">¡Conviértete en un Experto en Sistemas <br> Todo lo que Necesitas Saber!</h1>
+	<section class="modulos">
+  		<Modulos />
 	</section>
 
+	<section class="preguntas">
+		<h1>preguntas frecuentes</h1>
+		<Preguntas />
+	</section>
 
-	<!-- modulos de aprendizaje--> 
-	<section class="Modulos-p">
-	<Modulos></Modulos>
-	</section> 
+	<section class="nosotros">
 
-
-	<!--preguntas frecuentes -->
-	<section id="preguntas" class="preguntas">
-		<h1 class="pregunta-titulo">Preguntas frecuentes </h1>
-		<Preguntas></Preguntas>
-	</section> 
-
-
-
+	</section>
 </Layout>
 <style>
+ section{
+	background-color: aqua;
+	/* height:98vh; */
+	margin-bottom: 1px;
+	width: 100%;
+ }
 
-	.inicio-text{
-		padding-bottom: 50px;
-	}
-			
-	h1{	
-		font-size:70px;
-		color:#14ff72cb;
-		text-align: center;
-		
-	}
+ .header{
+	height: 8vh;
+	background-color:red;
+ }
+ .texto{
+	align-items: center;
+	justify-content: center;
+	display: flex;
+	height: 20vh;
+	background-color: blue;
+ }
 
-	.encabezado{
-		height: 80px;
-		width: 100%; 
-		border-radius: 0 0 30px 30px ;
-		background-color:transparent;
+.inicio-mensaje{
+	font-size:70px;
+	color:#14ff72cb;
+	text-align: center;
 
-		.retro-computer{
-			height:599px;
-			width: 100%;
-			border-radius: 0 0 30px 30px ;
-		}
-	}
-	.Modulos-p{
-		max-height:180;
-		min-height:4vh;
-		width: 90%;
-		position: relative;
-		margin-top: 20px ;
-		padding-left: 5%;
-		padding-right: 5%;
-		max-resolution: 90%;
-		background-color:transparent;
-		/* padding-left:px; */
-		
-	
-	}
-
-
-	.preguntas{ 
-		height: 300px;
-		width: 100%;
-		background-color:transparent;
-		margin-top: 48%;
-		margin-left: auto;
-		margin-right: auto;
-		position: relative;
-	}
-
-	.pregunta-titulo{
-		margin-bottom: 10px;
-		font-size: 50px;
 }
-
-
-
+ .modulos {
+  background: transparent;
+  max-width: 100%;      /* Igual que .preguntas */
+  margin: 0 auto;        /* Centrado horizontal */
+  padding: 32px 5vw 48px 5vw; /* Espaciado responsivo */
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-sizing: border-box;
+  overflow-x: auto;
+}
+ .preguntas{
+  background-color: transparent;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+ }
 </style>
