@@ -1,0 +1,308 @@
+<section>
+  <h1>Juego de Ponchado RJ45</h1>
+  <p>Arrastra cada cable hasta el pin correcto según la norma.</p>
+
+  <label for="norma">Norma:</label>
+  <select id="norma" onchange="setNorma()">
+    <option value="T568A">T568A</option>
+    <option value="T568B" selected>T568B</option>
+  </select>
+
+  <div class="juego">
+    <!-- RJ45 -->
+    <div class="rj45" id="rj45">
+      <div class="pin" data-pin="1">1</div>
+      <div class="pin" data-pin="2">2</div>
+      <div class="pin" data-pin="3">3</div>
+      <div class="pin" data-pin="4">4</div>
+      <div class="pin" data-pin="5">5</div>
+      <div class="pin" data-pin="6">6</div>
+      <div class="pin" data-pin="7">7</div>
+      <div class="pin" data-pin="8">8</div>
+    </div>
+
+    <!-- Cables -->
+    <div class="cables" id="cables"></div>
+  </div>
+
+  <button onclick="resetGame()">Reiniciar</button>
+</section>
+
+<style>
+section {
+  background: #23272e;
+  color: #fff;
+  text-align: center;
+  border-radius: 16px;
+  box-shadow: 0 4px 24px #0007;
+  padding: 1rem 1rem;
+  margin-bottom: 1rem;
+  max-width: 700px;
+  margin: 2rem auto;
+}
+
+h1 {
+  margin: 20px 0 10px 0;
+  font-size: 2.2rem;
+  color: #14ff72cb;
+}
+
+p {
+  margin-bottom: 18px;
+  font-size: 1.1rem;
+}
+
+#norma {
+  margin: 10px;
+  padding: 8px 12px;
+  font-size: 16px;
+  border-radius: 6px;
+  border: none;
+  background: #181818;
+  color: #fff;
+  box-shadow: 0 2px 8px #0004;
+}
+
+.juego {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.rj45 {
+  position: relative;
+  width: 340px;
+  height: 110px;
+  background: linear-gradient(to bottom, #e0e0e0 70%, #bdbdbd 100%);
+  border: 4px solid #444;
+  border-radius: 12px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  padding: 12px 10px 10px 10px;
+  box-shadow: 0 4px 16px #0006;
+  margin-bottom: 30px;
+}
+
+.pin {
+  width: 32px;
+  height: 80px;
+  background: #fff;
+  border: 2px solid #666;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  font-size: 13px;
+  color: #222;
+  border-radius: 6px;
+  cursor: pointer;
+  position: relative;
+  transition: background 0.2s, color 0.2s;
+  box-shadow: 0 2px 8px #0002;
+  font-weight: bold;
+  user-select: none;
+}
+
+.pin.correct {
+  background: #14ff72cb !important;
+  color: #101111 !important;
+  border-color: #14ff72cb !important;
+}
+
+.pin.wrong {
+  background: #e74c3c !important;
+  color: #fff !important;
+  border-color: #e74c3c !important;
+}
+
+.pin::after {
+  content: attr(data-pin);
+  position: absolute;
+  bottom: 4px;
+  right: 6px;
+  font-size: 11px;
+  color: #888;
+  opacity: 0.7;
+}
+
+.cables {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 12px;
+  max-width: 500px;
+}
+
+.cable {
+  width: 120px;
+  padding: 8px;
+  border-radius: 5px;
+  text-align: center;
+  cursor: grab;
+  font-weight: bold;
+  color: white;
+  box-shadow: 0 3px 8px #0005;
+  transition: transform 0.2s, box-shadow 0.2s;
+  border: 2px solid #222;
+  font-size: 1rem;
+  user-select: none;
+}
+
+.cable:active {
+  transform: scale(1.08);
+  box-shadow: 0 6px 16px #0007;
+  border-color: #14ff72cb;
+}
+
+button {
+  margin-top: 20px;
+  padding: 10px 24px;
+  font-size: 16px;
+  border: none;
+  background: #14ff72cb;
+  color: #101111;
+  border-radius: 8px;
+  cursor: pointer;
+  box-shadow: 0 3px 8px #0004;
+  font-weight: bold;
+  transition: background 0.2s, color 0.2s;
+}
+
+button:hover {
+  background: #6c20a6;
+  color: #fff;
+}
+
+@media (max-width: 600px) {
+  .rj45 {
+    width: 98vw;
+    min-width: 220px;
+    padding: 8px 2vw;
+  }
+  .cable {
+    width: 90px;
+    font-size: 0.9rem;
+  }
+  section {
+    padding: 1rem 0.2rem;
+    max-width: 99vw;
+  }
+}
+</style>
+
+<script>
+const normas = {
+  T568A: {
+    1: "Blanco/Verde",
+    2: "Verde",
+    3: "Blanco/Naranja",
+    4: "Azul",
+    5: "Blanco/Azul",
+    6: "Naranja",
+    7: "Blanco/Café",
+    8: "Café"
+  },
+  T568B: {
+    1: "Blanco/Naranja",
+    2: "Naranja",
+    3: "Blanco/Verde",
+    4: "Azul",
+    5: "Blanco/Azul",
+    6: "Verde",
+    7: "Blanco/Café",
+    8: "Café"
+  }
+};
+
+const colores = {
+  "Blanco/Verde": "linear-gradient(45deg, white 50%, green 50%)",
+  "Verde": "green",
+  "Blanco/Naranja": "linear-gradient(45deg, white 50%, orange 50%)",
+  "Naranja": "orange",
+  "Azul": "blue",
+  "Blanco/Azul": "linear-gradient(45deg, white 50%, deepskyblue 50%)",
+  "Blanco/Café": "linear-gradient(45deg, white 50%, brown 50%)",
+  "Café": "brown"
+};
+
+let normaActual = "T568B";
+let dragged = null;
+
+function generarCables() {
+  const cablesDiv = document.getElementById("cables");
+  if (!cablesDiv) return;
+  cablesDiv.innerHTML = "";
+  Object.values(normas[normaActual]).forEach((nombre) => {
+    const div = document.createElement("div");
+    div.classList.add("cable");
+    div.textContent = nombre;
+    div.style.background = colores[nombre];
+    div.dataset.color = nombre;
+    div.draggable = true;
+    div.addEventListener("dragstart", () => (dragged = div));
+    div.addEventListener("dragend", () => (dragged = null));
+    cablesDiv.appendChild(div);
+  });
+}
+
+function bindPinListenersOnce() {
+  document.querySelectorAll(".pin").forEach((pin) => {
+    if (pin.dataset.bound === "1") return; // evita duplicar listeners
+    pin.dataset.bound = "1";
+
+    pin.addEventListener("dragover", (e) => e.preventDefault());
+    pin.addEventListener("drop", (e) => {
+      e.preventDefault();
+      if (!dragged) return;
+
+      const pinNum = pin.dataset.pin;
+      const correcto = normas[normaActual][pinNum];
+
+      if (dragged.dataset.color === correcto) {
+        pin.classList.add("correct");
+        pin.classList.remove("wrong");
+        pin.textContent = ""; // dejamos el número en ::after
+        pin.setAttribute("data-pin", pinNum);
+        pin.style.background = colores[correcto];
+        dragged.remove();
+      } else {
+        pin.classList.add("wrong");
+        setTimeout(() => pin.classList.remove("wrong"), 800);
+      }
+    });
+  });
+}
+
+function resetGame() {
+  document.querySelectorAll(".pin").forEach((pin, i) => {
+    pin.textContent = String(i + 1);
+    pin.classList.remove("correct", "wrong");
+    pin.setAttribute("data-pin", String(i + 1));
+    pin.style.background = "#fff";
+  });
+  generarCables();
+}
+
+function init() {
+  const select = document.getElementById("norma");
+  const btn = document.getElementById("btnReset");
+
+  if (select) {
+    normaActual = select.value || "T568B";
+    select.addEventListener("change", (e) => {
+      normaActual = e.target.value;
+      resetGame();
+    });
+  }
+
+  if (btn) {
+    btn.addEventListener("click", resetGame);
+  }
+
+  bindPinListenersOnce();
+  resetGame();
+}
+
+document.addEventListener("DOMContentLoaded", init);
+</script>
