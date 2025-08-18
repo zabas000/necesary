@@ -11,68 +11,140 @@ import Menu from '../../../components/menu.astro';
             <h1>Comandos para cisco packet tracer </h1>
             <p class="definicion">Los comandos Cisco permiten configurar y administrar routers y switches desde la línea de comandos. Esta guía resume los más usados por Técnicos en Sistemas del SENA en prácticas reales y en Cisco Packet Tracer.</p>
 
-            <h2>Comandos Basicos</h2>
-            <ul>
-                <li> <strong>enable</strong> Entra al modo privilegiado.</li>
-                <li> <strong>configure terminal</strong> Entra al modo de configuración global.</li>
-                <li> <strong>exit</strong> Sale de un modo o menú actual.</li>
-            </ul>
+            <h2>Comandos basicos</h2>
+            <div class="terminal">
+                <div class="cmd">
+                    <span class="comando">enable</span>
+                    <span class="comentario">// Entra al modo privilegiado.</span>
+                </div>
+                <div class="cmd">
+                    <span class="comando">configure terminal</span>
+                    <span class="comentario">// Accede al modo de configuración global.</span>
+                </div>
+                <div class="cmd">
+                    <span class="comando">hostname [nombre]</span>
+                    <span class="comentario">// Cambia el nombre del dispositivo.</span>
+                </div>
+                <div class="cmd">
+                    <span class="comando">exit</span>
+                    <span class="comentario">// Sale de un modo o menú actual.</span>
+                </div>
+                <div class="cmd">
+                    <span class="comando">end</span>
+                    <span class="comentario">// Vuelve al modo EXEC privilegiado.</span>
+                </div>
+            </div>
 
 
-            <h2>Configuración básica del dispositivo</h2>
-            <ul>
-                <li> <strong>hostname [nombre]</strong> Cambia el nombre del dispositivo.</li>
-                <li> <strong>enable secret [contraseña</strong> Establece la contraseña para el modo privilegiado.</li>
-                <li> <strong>line console 0</strong> Entra a la línea de consola.</li>
-                <li> <strong>password [contraseña]</strong> Establece la contraseña de consola.</li>
-                <li> <strong>login</strong> Activa el uso de la contraseña de consola.</li>
-            </ul>
+            <h2>Seguridad</h2>
+            <div class="terminal">
+                <div class="cmd">
+                    <span class="comando">enable secret [contraseña]</span>
+                    <span class="comentario">// Configura la contraseña para acceder al modo privilegiado (cifrada).</span>
+                </div>
+                <div class="cmd">
+                    <span class="comando">line console 0</span>
+                    <span class="comentario">// Entra a la configuración de la consola.</span>
+                </div>
+                <div class="cmd">
+                    <span class="comando">password [contraseña]</span>
+                    <span class="comentario">// Define una contraseña en la línea actual (consola, VTY, etc.).</span>
+                </div>
+                <div class="cmd">
+                    <span class="comando">login</span>
+                    <span class="comentario">// Activa el uso de contraseña en la línea configurada.</span>
+                </div>
+                <div class="cmd">
+                    <span class="comando">service password-encryption</span>
+                    <span class="comentario">// Cifra todas las contraseñas en el archivo de configuración.</span>
+                </div>
+            </div>
 
             <h2>Configuración de interfaces</h2>
-            <ul>
-                <li> <strong>interface [FastEthernet0/0]</strong> Entra a una interfaz para configurarla.</li>
-                <li> <strong>ip address [IP] [máscara]</strong> Asigna IP a una interfaz.</li>
-                <li> <strong>no shutdown</strong> Activa (enciende) una interfaz.</li>
-                <li> <strong>shutdown</strong> Apaga la interfaz.</li>
-                <li> <strong>description [texto]</strong> Agrega una descripción a la interfaz.</li>
-            </ul>
+            <div class="terminal">
+                <div class="cmd">
+                    <span class="comando">interface [tipo][número]</span>
+                    <span class="comentario">// Entra a la configuración de una interfaz (ej: FastEthernet0/0).</span>
+                </div>
+                <div class="cmd">
+                    <span class="comando">ip address [IP] [máscara]</span>
+                    <span class="comentario">// Asigna una dirección IP a la interfaz.</span>
+                </div>
+                <div class="cmd">
+                    <span class="comando">no shutdown</span>
+                    <span class="comentario">// Activa una interfaz.</span>
+                </div>
+                <div class="cmd">
+                    <span class="comando">shutdown</span>
+                    <span class="comentario">// Desactiva una interfaz.</span>
+                </div>
+            </div>
 
 
-            <h2>Verificación y diagnóstico</h2>
-            <ul>
-                <li> <strong>show ip interface brief</strong> Muestra resumen de interfaces y estados.</li>
-                <li> <strong>show running-config</strong> Muestra la configuración activa.</li>
-                <li> <strong>show startup-config</strong> Muestra la configuración guardada.</li>
-                <li> <strong>show version</strong> Muestra información del hardware y software del equipo.</li>
-                <li> <strong>show vlan brief</strong> Muestra las VLAN configuradas.</li>
-                <li> <strong>show mac address-table</strong> Muestra la tabla de direcciones MAC del switch.</li>
-            </ul>
+            <h2>Ruteo estático</h2>
+            <div class="terminal">
+                <div class="cmd">
+                    <span class="comando">ip route [red] [máscara] [puerta de enlace]</span>
+                    <span class="comentario">// Configura una ruta estática.</span>
+                </div>
+            </div>
 
 
-            <h2>Guardar configuración</h2>
-            <ul>
-                <li> <strong>copy running-config startup-config</strong> Guarda los cambios en la memoria NVRAM.</li>
-            </ul>
+            <h2>Verificacion</h2>
+            <div class="terminal">
+               <div class="cmd">
+                    <span class="comando">ping [IP]</span>
+                    <span class="comentario">// Verifica la conectividad con otro dispositivo.</span>
+                </div>
+                <div class="cmd">
+                    <span class="comando">show running-config</span>
+                    <span class="comentario">// Muestra la configuración en ejecución.</span>
+                </div>
+                <div class="cmd">
+                    <span class="comando">show startup-config</span>
+                    <span class="comentario">// Muestra la configuración guardada en NVRAM.</span>
+                </div>
+                <div class="cmd">
+                    <span class="comando">copy running-config startup-config</span>
+                    <span class="comentario">// Guarda la configuración actual para que persista tras reinicio.</span>
+                </div>
+                <div class="cmd">
+                    <span class="comando">show ip interface brief</span>
+                    <span class="comentario">// Lista las interfaces y su estado (IP, up/down).</span>
+                </div>
+            </div>
 
-            <h2>Configuración básica del dispositivo</h2>
-            <ul>
-                <li> <strong>erase startup-config</strong> Borra la configuración guardada (restablecer).</li>
-                <li> <strong>reload</strong> Reinicia el dispositivo.</li>
-                <li> <strong>ping [IP]</strong> Verifica conectividad.</li>
-                <li> <strong>traceroute [IP]</strong> Muestra la ruta hasta otro dispositivo.</li>
-            </ul>
+
+            <h2>VLANs y Switches</h2>
+            <div class="terminal">
+                <div class="cmd">
+                    <span class="comando">vlan [id]</span>
+                    <span class="comentario">// Crea o accede a una VLAN en el switch.</span>
+                </div>
+                <div class="cmd">
+                    <span class="comando">name [nombre]</span>
+                    <span class="comentario">// Asigna un nombre a la VLAN.</span>
+                </div>
+                <div class="cmd">
+                    <span class="comando">interface fastEthernet0/1</span>
+                    <span class="comentario">// Entra en la configuración de un puerto específico.</span>
+                </div>
+                <div class="cmd">
+                    <span class="comando">switchport mode access</span>
+                    <span class="comentario">// Configura el puerto en modo acceso.</span>
+                </div>
+                <div class="cmd">
+                    <span class="comando">switchport access vlan [id]</span>
+                    <span class="comentario">// Asigna el puerto a una VLAN específica.</span>
+                </div>
+            </div>
+          
                
             <div class="resaltado">
                 <p class="marcado">
                     Estos comandos son esenciales para la configuración y administración de dispositivos Cisco. Practicar su uso en Cisco Packet Tracer te ayudará a familiarizarte con el entorno real y a prepararte para situaciones prácticas en el campo.<br>
                 </p>
-
             </div>
-            
-
-
-
-
         </section>
         
     </div>
@@ -87,6 +159,7 @@ import Menu from '../../../components/menu.astro';
     width: 100%;
     margin-bottom: 8rem;
     background-color:#101111cb;
+    align-items: ;
 }
 
 .info {
@@ -121,19 +194,11 @@ import Menu from '../../../components/menu.astro';
 
     h2 {
         color: #14ff72;
-        font-size: 1.8rem;
+        font-size: 2.8rem;
         margin-left: 10rem;
-        margin-top: 2rem;
-        margin-bottom: 2rem;
-    }
-
-    .info ul {
-        color: #ffffff;
-        font-size: 1rem;
-        margin-left: 10rem;
-        margin-right: 10rem;
-        line-height: 1.5;
-        font-family: monospace;
+        margin-top: 1rem;
+        margin-bottom: 0rem;
+        align-items: center;
     }
     .marcado {
          color: #14ff72;
@@ -145,10 +210,6 @@ import Menu from '../../../components/menu.astro';
        
     }
 
-    strong {
-        color: #e7a68d;
-        font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    }
 
     .resaltado {
         border-left: #14ff72 solid 3px;
@@ -156,15 +217,6 @@ import Menu from '../../../components/menu.astro';
         margin-right: 1rem;
         margin-top: 3rem;
         margin-bottom: 3rem;
-    }
-
-    .info ul li {
-        margin-left:0;
-        padding:0;
-    }
-
-    ul{
-       ;
     }
 
     a{
@@ -182,5 +234,41 @@ import Menu from '../../../components/menu.astro';
 
     }
 
+    .terminal {
+        background: #181818;
+        border-radius: 8px;
+        padding: 1.5rem 2rem;
+        margin: 2rem 10rem;
+        font-family: 'Fira Mono', 'Consolas', monospace;
+        box-shadow: 0 2px 16px #0006;
+        width: 60rem;
+    }
 
+    .cmd {
+        display: flex;
+        align-items: center;
+        margin-bottom: 0.8rem;
+    }
+
+    .comando {
+        color: #fff;
+        font-weight: bold;
+        font-size: 1.1rem;
+        min-width: 220px;
+        letter-spacing: 1px;
+    }
+
+    .comentario {
+        color: #b3b3b3;
+        font-size: 1rem;
+        margin-left: 18px;
+        font-style: italic;
+    }
+
+    .cmd:hover {
+        background-color: #2a2a2a;
+        padding: 0.01rem;
+        border-radius: 4px;
+        transition: background-color 0.3s ease;
+    }
 </style>
