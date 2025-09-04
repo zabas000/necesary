@@ -13,7 +13,7 @@ import Preguntas from '../components/preguntas.astro';
 		<Header />
 	</section>
 	<section class="texto">
-		<h1 class="inicio-mensaje">¡Conviértete en un Experto en Sistemas <br> Todo lo que Necesitas Saber!</h1>
+		<h1 class="inicio-mensaje">¡Aprende, crea y domina! <br> Todo sobre Sistemas en un solo lugar.</h1>
 
 	</section>
 
@@ -26,28 +26,52 @@ import Preguntas from '../components/preguntas.astro';
 		<Preguntas />
 	</section>
 
-	<section class="nosotros">
+	<section class="container" aria-label="Nuestra experiencia">
+  	<h2 class="section-title">Nuestra Experiencia</h2>
+  <p class="section-subtitle">Así fue nuestro proceso en la Media Técnica en Sistemas, una etapa llena de aprendizajes y experiencias.</p>
 
-	</section>
+  <div class="cards">
+    <article class="card">
+      <img src="/imagenes/jhohan.jpg" alt="" />
+      <div class="card-content">
+        <h3 class="nombre">Jhohan Villa Hipo</h3>
+        <p>En la media técnica de sistemas, me le medí a todo lo que se vino a pesar de no saber no siquiera para que servía una RAM. Aprendí a reparar computadores y a comprender las redes. La verdad, la formación fue una fue buena como tal, digamos que me dio las bases para entender este mundo de la tecnología y me dejó listo para lo que sea que venga, aprendí incluso a trabajar con circuitos y con arduinos, a pesar de que yo detestaba trabajar con estos me volví uno de los mejores con estos. Quedé bien preparado, con todo el conocimiento y listo para enfrentar los retos que se presenten.</p>
+      </div>
+    </article>
+
+    <article class="card">
+      <img src="/imagenes/emanuel.jpg" alt="" />
+      <div class="card-content">
+        <h3 class="nombre">Emanuel Guaman</h3>
+        <p> la media técnica en sistemas, me llamó la atención porque decían que podía ganar mucha plata si tenía el conocimiento sobre computadores y trabajaba con ellos. Pensé que esto iba a ser fácil, pero cuando entré me di cuenta de que no lo fue tanto. Sin embargo, a pesar de todo, seguí adelante y, junto con mis compañeros, el profesor y todas las personas que me fui encontrando en el camino, fui aprendiendo y entendiendo todo este mundo de los sistemas y la tecnología.</p>
+      </div>
+    </article>
+
+    <article class="card">
+      <img src="/imagenes/sebas.jpg" alt="" />
+      <div class="card-content">
+        <h3 class="nombre">Sebastian Acevedo</h3>
+        <p>Para mí, la media técnica fue una experiencia muy valiosa. Aunque en algunos momentos esperaba un poco más, reconozco que me brindó grandes conocimientos que serán de utilidad para mi futuro personal y profesional. No solo aprendí sobre el área de sistemas, también crecí como persona al compartir con compañeros y docentes que marcaron mi camino. Durante este proceso construí amistades que sé que perdurarán en el tiempo y que forman parte de los mejores recuerdos que me llevo del INEM. Me voy con la satisfacción de haber aprovechado esta oportunidad y con la certeza de que las próximas generaciones de Técnicos en Sistemas contarán con excelentes profesores que los guiarán con dedicación y compromiso.</p>
+      </div>
+    </article>
+  </div>
 </Layout>
 <style>
  section{
-	background-color: aqua;
-	/* height:98vh; */
 	margin-bottom: 1px;
 	width: 100%;
  }
 
  .header{
 	height: 8vh;
-	background-color:transparent;
+	position: sticky;
+	z-index: 10;
  }
  .texto{
 	align-items: center;
 	justify-content: center;
 	display: flex;
 	height: 20vh;
-	background-color: transparent;
  }
 
 .inicio-mensaje{
@@ -57,7 +81,6 @@ import Preguntas from '../components/preguntas.astro';
 
 }
  .modulos {
-  background: transparent;
   max-width: 100%;      /* Igual que .preguntas */
   margin: 0 auto;        /* Centrado horizontal */
   padding: 32px 5vw 48px 5vw; /* Espaciado responsivo */
@@ -69,15 +92,85 @@ import Preguntas from '../components/preguntas.astro';
   overflow-x: auto;
 }
  .preguntas{
-  background-color: transparent;
+  /* background-color: cornflowerblue; */
   display: flex;
   flex-direction: column;
   align-items: center;
  }
 
  h2 {
-  font-size: 2rem;
+  font-size: 3rem;
   color: #14ff72cb;
-  margin-bottom: 20px;}
-  
+  margin-bottom: 20px;
+}
+
+
+/* Estilos para la sección de expreriencias */
+ .container {
+    max-width: 1300px;
+    margin: 0 auto;
+    padding: 1rem 1rem 3rem;
+  }
+  h2.section-title {
+    text-align: center;
+    font-size: 2.5rem;
+    color: #14ff72cb;
+    margin-bottom: 0.5rem;
+  }
+  p.section-subtitle {
+    text-align: center;
+    color: #ddd;
+    font-size: 1.1rem;
+    margin-bottom: 3rem;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .cards {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 3rem;
+  }
+  @media(min-width: 700px) {
+    .cards {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+  .card {
+    background: #f5f7fa;
+    border-radius: 15px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.12);
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  .card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 40px rgba(0,0,0,0.25);
+  }
+  .card img {
+    width: 100%;
+    height: 380px;
+    object-fit: cover;
+    display: block;
+  }
+  .card-content {
+    padding: 1.5rem;
+  }
+  .card-content h3 {
+    margin-top: 0;
+    margin-bottom: 0.50rem;
+    font-size: 1.5rem;
+    /* color: #222; */
+  }
+  .card-content p {
+    margin: 0;
+    line-height: 1.4;
+    color: #555;
+  }
+
+  p{
+     font-family: monospace;
+     font-size: 0.9rem;
+  }
+
 </style>
