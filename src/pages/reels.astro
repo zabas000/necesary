@@ -1,0 +1,386 @@
+<div class="app-container">
+    <div class="videos-container" id="videos-container">
+        <!-- Video 1 -->
+        <div class="video-item">
+            <div class="loading-spinner"></div>
+            <video muted loop playsinline preload="auto">
+                <source src="/imagenes/1.mp4" type="video/mp4">
+            </video>
+            <button class="mute-btn" aria-label="Mute/Unmute"></button>
+            <div class="video-info">
+                <div class="video-description">
+                    En este video te mostramos que es el sofware  <br>y su importancia en el mundo de la tecnología.<br>
+                    si quieres aprender más sobre este tema, ve a <a href="/galeria">Galeria</a> 
+                </div>
+            </div>
+        </div>
+        <!-- Video 2 -->
+        <div class="video-item">
+            <div class="loading-spinner"></div>
+            <video muted loop playsinline preload="auto">
+                <source src="https://assets.codepen.io/3364143/sample.mp4" type="video/mp4">
+            </video>
+            <button class="mute-btn" aria-label="Mute/Unmute"></button>
+            <div class="video-info">
+                <div class="video-description">
+                    ¡Nunca subestimen el poder de una buena idea! 💡
+                </div>
+            </div>
+        </div>
+        <!-- Video 3 -->
+        <div class="video-item">
+            <div class="loading-spinner"></div>
+            <video muted loop playsinline preload="auto">
+                <source src="https://assets.codepen.io/3364143/sample.mp4" type="video/mp4">
+            </video>
+            <button class="mute-btn" aria-label="Mute/Unmute"></button>
+            <div class="video-info">
+                <div class="video-description">
+                    Así se hace... paso a paso hasta el éxito. 🚀
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="nav-indicator">
+        <div class="nav-dot active"></div>
+        <div class="nav-dot"></div>
+        <div class="nav-dot"></div>
+    </div>
+</div>
+
+<script is:client="load">
+const videosContainer = document.getElementById('videos-container');
+const videos = document.querySelectorAll('.video-item video');
+const dots = document.querySelectorAll('.nav-dot');
+const muteBtns = document.querySelectorAll('.mute-btn');
+let currentVideoIndex = 0;
+let scrollTimeout;
+
+// Loader solo mientras el video carga
+videos.forEach((video, idx) => {
+    const spinner = video.parentElement.querySelector('.loading-spinner');
+    spinner.style.display = 'flex';
+    video.addEventListener('loadeddata', function() {
+        spinner.style.display = 'none';
+        if(idx === 0 && currentVideoIndex === 0 && video.paused) {
+            video.play();
+        }
+    });
+    video.addEventListener('waiting', function() {
+        spinner.style.display = 'flex';
+    });
+    video.addEventListener('playing', function() {
+        spinner.style.display = 'none';
+    });
+    video.addEventListener('click', function() {
+        if (this.paused) {
+            this.play();
+        } else {
+            this.pause();
+        }
+    });
+});
+
+// Mute/Unmute button logic
+muteBtns.forEach((btn, idx) => {
+    setMuteIcon(btn, videos[idx].muted);
+    btn.addEventListener('click', function(e) {
+        e.stopPropagation();
+        videos[idx].muted = !videos[idx].muted;
+        setMuteIcon(btn, videos[idx].muted);
+    });
+});
+
+function setMuteIcon(btn, muted) {
+    btn.innerHTML = muted
+        ? `<svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"></polygon><line x1="23" y1="9" x2="17" y2="15"></line><line x1="17" y1="9" x2="23" y2="15"></line></svg>`
+        : `<svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"></polygon><path d="M19 12c0-2.21-1.79-4-4-4"></path><path d="M15 8c0-1.1-.9-2-2-2"></path></svg>`;
+}
+
+function updateActiveVideo() {
+    videos.forEach(video => video.pause());
+    if (videos[currentVideoIndex]) {
+        videos[currentVideoIndex].play();
+    }
+    dots.forEach((dot, idx) => {
+        dot.classList.toggle('active', idx === currentVideoIndex);
+    });
+}
+
+function getCurrentIndex() {
+    let minDiff = Infinity;
+    let idx = 0;
+    videos.forEach((video, i) => {
+        const rect = video.parentElement.getBoundingClientRect();
+        const diff = Math.abs(rect.top + rect.height/2 - window.innerHeight/2);
+        if (diff < minDiff) {
+            minDiff = diff;
+            idx = i;
+        }
+    });
+    return idx;
+}
+
+function onScrollOrWheel() {
+    clearTimeout(scrollTimeout);
+    scrollTimeout = setTimeout(() => {
+        const newIndex = getCurrentIndex();
+        if (newIndex !== currentVideoIndex) {
+            currentVideoIndex = newIndex;
+            updateActiveVideo();
+        }
+    }, 100);
+}
+
+videosContainer.addEventListener('scroll', onScrollOrWheel);
+videosContainer.addEventListener('wheel', onScrollOrWheel);
+
+// Touch para móviles
+let touchStartY = 0;
+videosContainer.addEventListener('touchstart', e => {
+    touchStartY = e.touches[0].clientY;
+});
+videosContainer.addEventListener('touchend', e => {
+    const touchEndY = e.changedTouches[0].clientY;
+    if (Math.abs(touchStartY - touchEndY) > 50) {
+        setTimeout(() => {
+            const newIndex = getCurrentIndex();
+            if (newIndex !== currentVideoIndex) {
+                currentVideoIndex = newIndex;
+                updateActiveVideo();
+            }
+        }, 200);
+    }
+});
+
+// Inicia el primer video si ya está cargado
+if (videos[0] && videos[0].readyState >= 2) {
+    videos[0].play();
+}
+</script>
+
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #000;
+    color: #fff;
+    overflow: hidden;
+    height: 100vh;
+}
+.app-container {
+    width: 100vw;
+    height: 100vh;
+    position: relative;
+    background: #000;
+}
+.videos-container {
+    height: 100vh;
+    overflow-y: scroll;
+    scroll-snap-type: y mandatory;
+    scroll-behavior: smooth;
+}
+.video-item {
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    scroll-snap-align: start;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #000;
+}
+video {
+    width: auto;
+    height: auto;
+    max-width: 480px;    /* Más ancho */
+    max-height: 92vh;    /* Más alto */
+    object-fit: contain;
+    background: #111;
+    border-radius: 16px;
+    box-shadow: 0 0 24px #000a;
+    display: block;
+    margin: 0 auto;
+}
+.video-info {
+    position: absolute;
+    bottom: 40px;
+    left: 16px;
+    right: 16px;
+    z-index: 10;
+}
+.video-creator {
+    display: flex;
+    align-items: center;
+    margin-bottom: 12px;
+}
+.avatar {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    background: linear-gradient(45deg, #1ec22c, #ff0050);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 12px;
+    color: white;
+    font-size: 20px;
+}
+.creator-name {
+    font-weight: bold;
+    font-size: 18px;
+}
+.video-description {
+    margin-bottom: 16px;
+    font-size: 16px;
+    line-height: 1.4;
+}
+.video-sound {
+    display: none !important;
+    display: flex;
+    align-items: center;
+    color: #ddd;
+    font-size: 14px;
+}
+.nav-indicator {
+    position: absolute;
+    top: 20px;
+    left: 0;
+    right: 0;
+    display: flex;
+    justify-content: center;
+    z-index: 20;
+}
+.nav-dot {
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.4);
+    margin: 0 4px;
+    transition: all 0.3s ease;
+}
+.nav-dot.active {
+    background-color: #fff;
+    width: 20px;
+    border-radius: 4px;
+}
+.add-video-btn {
+    display: none !important;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background: linear-gradient(45deg, #ff0050, #ff0050);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-size: 24px;
+    z-index: 100;
+    cursor: pointer;
+    box-shadow: 0 4px 12px rgba(255, 0, 80, 0.4);
+}
+.loading-spinner {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 54px;
+    height: 54px;
+    border: 6px solid rgba(255, 255, 255, 0.2);
+    border-radius: 50%;
+    border-top-color: #ff0050;
+    animation: spin 1s linear infinite;
+    z-index: 5;
+    display: none;
+    background: transparent;
+}
+@keyframes spin {
+    to { transform: translate(-50%, -50%) rotate(360deg); }
+}
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 16px;
+    background: linear-gradient(to bottom, rgba(0,0,0,0.7), transparent);
+    z-index: 50;
+}
+.logo {
+    font-weight: bold;
+    font-size: 20px;
+    color: #fff;
+}
+.search-btn {
+    color: #fff;
+    font-size: 20px;
+}
+.mute-btn {
+    position: absolute;
+    top: 18px;
+    right: 18px;
+    z-index: 20;
+    background: linear-gradient(135deg, #14ff72cb 0%, #6c20a6 100%);
+    border: none;
+    border-radius: 50%;
+    width: 48px;
+    height: 48px;
+    color: #fff;
+    font-size: 1.5rem;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 16px #0006;
+    transition: background 0.2s, box-shadow 0.2s, color 0.2s;
+    outline: none;
+    border: 2px solid #fff2;
+}
+.mute-btn:hover, .mute-btn:focus {
+    background: linear-gradient(135deg, #6c20a6 0%, #14ff72cb 100%);
+    color: #101111;
+    box-shadow: 0 6px 24px #14ff72aa;
+    border-color: #14ff72cb;
+}
+/* Oculta todas las barras de scroll en todos los navegadores */
+body, .videos-container {
+    scrollbar-width: none;      /* Firefox */
+    -ms-overflow-style: none;   /* IE y Edge */
+}
+body::-webkit-scrollbar,
+.videos-container::-webkit-scrollbar {
+    display: none;              /* Chrome, Safari y Opera */
+}
+@media (max-width: 600px) {
+    .avatar {
+        width: 36px;
+        height: 36px;
+        font-size: 16px;
+    }
+    .video-info {
+        bottom: 16px;
+        left: 8px;
+        right: 8px;
+    }
+    .add-video-btn {
+        width: 44px;
+        height: 44px;
+        font-size: 18px;
+    }
+    .loading-spinner {
+        width: 36px;
+        height: 36px;
+        border-width: 4px;
+    }
+}
+</style>
