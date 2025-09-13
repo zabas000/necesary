@@ -48,7 +48,7 @@
     </div>
 </div>
 
-<script is:client="load">
+<script is:inline>
 const videosContainer = document.getElementById('videos-container');
 const videos = document.querySelectorAll('.video-item video');
 const dots = document.querySelectorAll('.nav-dot');
@@ -132,26 +132,28 @@ function onScrollOrWheel() {
     }, 100);
 }
 
-videosContainer.addEventListener('scroll', onScrollOrWheel);
-videosContainer.addEventListener('wheel', onScrollOrWheel);
+if (videosContainer) {
+    videosContainer.addEventListener('scroll', onScrollOrWheel);
+    videosContainer.addEventListener('wheel', onScrollOrWheel);
 
-// Touch para móviles
-let touchStartY = 0;
-videosContainer.addEventListener('touchstart', e => {
-    touchStartY = e.touches[0].clientY;
-});
-videosContainer.addEventListener('touchend', e => {
-    const touchEndY = e.changedTouches[0].clientY;
-    if (Math.abs(touchStartY - touchEndY) > 50) {
-        setTimeout(() => {
-            const newIndex = getCurrentIndex();
-            if (newIndex !== currentVideoIndex) {
-                currentVideoIndex = newIndex;
-                updateActiveVideo();
-            }
-        }, 200);
-    }
-});
+    // Touch para móviles
+    let touchStartY = 0;
+    videosContainer.addEventListener('touchstart', e => {
+        touchStartY = e.touches[0].clientY;
+    });
+    videosContainer.addEventListener('touchend', e => {
+        const touchEndY = e.changedTouches[0].clientY;
+        if (Math.abs(touchStartY - touchEndY) > 50) {
+            setTimeout(() => {
+                const newIndex = getCurrentIndex();
+                if (newIndex !== currentVideoIndex) {
+                    currentVideoIndex = newIndex;
+                    updateActiveVideo();
+                }
+            }, 200);
+        }
+    });
+}
 
 // Inicia el primer video si ya está cargado
 if (videos[0] && videos[0].readyState >= 2) {
