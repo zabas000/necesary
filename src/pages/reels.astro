@@ -9,8 +9,8 @@
             <button class="mute-btn" aria-label="Mute/Unmute"></button>
             <div class="video-info">
                 <div class="video-description">
-                    En este video te mostramos que es el sofware  <br>y su importancia en el mundo de la tecnología.<br>
-                    si quieres aprender más sobre este tema, ve a <a href="/galeria">Galeria</a> 
+                    En este video te mostramos que es el sofware  <br>y su importancia en el mundo de la tecnologia.<br>
+                    si quieres aprender mas sobre este tema, ve a <a href="/clase/software/que-es-software">software</a> 
                 </div>
             </div>
         </div>
@@ -18,7 +18,7 @@
         <div class="video-item">
             <div class="loading-spinner"></div>
             <video muted loop playsinline preload="auto">
-                <source src="https://assets.codepen.io/3364143/sample.mp4" type="video/mp4">
+                <source src="/imagenes/2.mp4" type="video/mp4">
             </video>
             <button class="mute-btn" aria-label="Mute/Unmute"></button>
             <div class="video-info">
@@ -31,7 +31,20 @@
         <div class="video-item">
             <div class="loading-spinner"></div>
             <video muted loop playsinline preload="auto">
-                <source src="https://assets.codepen.io/3364143/sample.mp4" type="video/mp4">
+                  <source src="/imagenes/3.mp4" type="video/mp4">
+            </video>
+            <button class="mute-btn" aria-label="Mute/Unmute"></button>
+            <div class="video-info">
+                <div class="video-description">
+                    Así se hace... paso a paso hasta el éxito. 🚀
+                </div>
+            </div>
+        </div>
+
+        <div class="video-item">
+            <div class="loading-spinner"></div>
+            <video muted loop playsinline preload="auto">
+                  <source src="/imagenes/3.mp4" type="video/mp4">
             </video>
             <button class="mute-btn" aria-label="Mute/Unmute"></button>
             <div class="video-info">
@@ -215,26 +228,10 @@ video {
     right: 16px;
     z-index: 10;
 }
-.video-creator {
-    display: flex;
-    align-items: center;
-    margin-bottom: 12px;
-}
-.avatar {
-    width: 48px;
-    height: 48px;
-    border-radius: 50%;
-    background: linear-gradient(45deg, #1ec22c, #ff0050);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-right: 12px;
-    color: white;
-    font-size: 20px;
-}
-.creator-name {
-    font-weight: bold;
-    font-size: 18px;
+a{
+    color: #14ff72;
+    text-decoration: none;
+    font-size: 1.1rem;
 }
 .video-description {
     margin-bottom: 16px;
@@ -270,24 +267,6 @@ video {
     width: 20px;
     border-radius: 4px;
 }
-.add-video-btn {
-    display: none !important;
-    position: fixed;
-    bottom: 20px;
-    right: 20px;
-    width: 60px;
-    height: 60px;
-    border-radius: 50%;
-    background: linear-gradient(45deg, #ff0050, #ff0050);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: white;
-    font-size: 24px;
-    z-index: 100;
-    cursor: pointer;
-    box-shadow: 0 4px 12px rgba(255, 0, 80, 0.4);
-}
 .loading-spinner {
     position: absolute;
     top: 50%;
@@ -318,11 +297,6 @@ video {
     background: linear-gradient(to bottom, rgba(0,0,0,0.7), transparent);
     z-index: 50;
 }
-.logo {
-    font-weight: bold;
-    font-size: 20px;
-    color: #fff;
-}
 .search-btn {
     color: #fff;
     font-size: 20px;
@@ -332,7 +306,7 @@ video {
     top: 18px;
     right: 18px;
     z-index: 20;
-    background: linear-gradient(135deg, #14ff72cb 0%, #6c20a6 100%);
+    background-color: #14ff72cb;
     border: none;
     border-radius: 50%;
     width: 48px;
@@ -349,7 +323,7 @@ video {
     border: 2px solid #fff2;
 }
 .mute-btn:hover, .mute-btn:focus {
-    background: linear-gradient(135deg, #6c20a6 0%, #14ff72cb 100%);
+    background: #14ff72;
     color: #101111;
     box-shadow: 0 6px 24px #14ff72aa;
     border-color: #14ff72cb;
