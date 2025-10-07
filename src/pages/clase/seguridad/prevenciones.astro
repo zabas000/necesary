@@ -1,0 +1,144 @@
+---
+import Layout from '../../../layouts/Layout.astro';
+import Menu from '../../../components/menu.astro';
+---
+
+<Layout title="NECESSARY ">
+    <div class="contenedor">
+        <Menu></Menu>
+
+        <section class="info">
+            <h1>Reglas básicas de protección</h1>
+            <ul>
+                <li> <strong>Mantén tu equipo seguro</strong> -Actualiza siempre tu sistema y programas.</li>
+                <li> <strong>Navega con cuidado</strong> -Entra solo a páginas confiables.</li>
+                <li> <strong>Protege tus archivos</strong> -No abras correos o archivos de personas desconocidas.</li>
+                <li> <strong>Usa contraseñas fuertes</strong> -Combina letras, números y símbolos.</li>
+               
+            </ul>
+
+
+
+             <h2>Haz copia de seguridad de tu infromacion</h2>
+              <p class="definicion">los archivos que deberias respaldar son: Documentos, archivos multimedia, Bases de datos o proyectos técnicos, informacion critica...  </p>
+
+              <h1>Medios donde guardar las copias</h1>
+            <img src="/imagenes/medios.webp" alt="" >
+
+            <div class="resaltado">
+                <p class="marcado">
+                    personalmente te recomendamos usar un disco duro externo o una nube como google drive o mega, ya que son los mas seguros y faciles de usar
+                </p>
+
+            </div>
+            
+
+
+
+
+        </section>
+        
+    </div>
+  
+</Layout>
+
+<style>
+.contenedor {
+    display: flex;
+    flex-direction: row;
+    height: auto;
+    width: 100%;
+    margin-bottom: 8rem;
+    background-color:#101111cb;
+}
+
+.info {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items:start;
+    justify-content:start;
+    /* background-color: #101111cb; */
+     max-width: 75rem;
+}
+
+    .info h1 {
+        color: #14ff72;
+        font-size: 2.5rem;
+        margin-bottom: 1rem;
+        position:relative;
+        margin-top: 5rem;
+        margin-left: 10rem;
+       
+    }
+
+    .definicion {
+        color: #ffffff;
+        font-size: 1rem;
+        margin-left: 10rem;
+        margin-right: 10rem;
+        line-height: 1.5;
+        font-family: monospace;
+    }
+
+    h2 {
+        color: #14ff72;
+        font-size: 1.8rem;
+        margin-left: 10rem;
+        margin-top: 2rem;
+        margin-bottom: 2rem;
+    }
+
+    .info ul {
+        color: #ffffff;
+        font-size: 1rem;
+        margin-left: 10rem;
+        margin-right: 10rem;
+        line-height: 1.5;
+        font-family: monospace;
+    }
+    .marcado {
+         color: #14ff72;
+        font-size: 1rem;
+        margin-left: .5rem;
+        margin-right: 10rem;
+        line-height: 1.5;
+        font-family: monospace;
+       
+    }
+
+    .resaltado {
+        border-left: #14ff72 solid 3px;
+        margin-left: 10rem;
+        margin-right: 1rem;
+        margin-top: 3rem;
+        margin-bottom: 3rem;
+    }
+
+    .info ul li {
+        margin-left:0;
+        padding:0;
+    }
+
+    ul{
+       ;
+    }
+
+    a{
+        color:rgb(90, 23, 129);
+        text-decoration: ;
+        padding: 1rem;
+    }
+
+    img{
+        width: 60%;
+        height: auto;
+        padding-left: 10rem;
+        border-radius: 5% 5% 5% 5%;
+        margin-bottom: 1rem;
+
+    }
+
+
+</style>
