@@ -1,6 +1,3 @@
-<p align="center">
-  <img src="./logo.png" alt="Logo de Necesary" width="200"/>
-</p>
 
 <h1 align="center">🌐 Necesary</h1>
 <h3 align="center">Una guía para nuevos Técnicos en Sistemas</h3>
