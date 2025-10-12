@@ -1,7 +1,9 @@
-<div align="center">
+<p align="center">
+  <img src="./logo.png" alt="Logo de Necesary" width="200"/>
+</p>
 
-# 🌐 Necesary  
-### Una guía para nuevos Técnicos en Sistemas  
+<h1 align="center">🌐 Necesary</h1>
+<h3 align="center">Una guía para nuevos Técnicos en Sistemas</h3>
 
 ![Astro](https://img.shields.io/badge/Astro-FF5D01?style=for-the-badge&logo=astro&logoColor=white)
 ![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white)
