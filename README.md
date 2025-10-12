@@ -16,14 +16,34 @@
 
 ---
 
-## 🧭 Descripción
+##  Descripción
 
 **Necesary** es un sitio web creado por estudiantes del **SENA** para orientar a los nuevos aprendices del programa **Técnico en Sistemas**.  
 Ofrece guías prácticas, recursos y experiencias reales de estudiantes que cursaron la media técnica, con el objetivo de facilitar el proceso de aprendizaje y motivar a las nuevas generaciones.
 
 ---
 
-## 📚 Módulos principales
+## ❓ Preguntas Frecuentes (FAQ)
+
+####  ¿Quién puede colaborar en el sitio?
+
+Cualquier estudiante o egresado del programa **Técnico en Sistemas** que desee aportar su conocimiento, mejorar el contenido o compartir sus experiencias.  
+La colaboración es abierta y bienvenida: cada contribución ayuda a mantener viva la comunidad.
+
+---
+
+####  ¿Necesito experiencia para entender las guías?
+
+No. Todo el contenido está escrito con un lenguaje **claro, práctico y accesible**, pensado especialmente para quienes están dando sus primeros pasos en el mundo de los sistemas.
+
+---
+
+####  ¿Habrá más actualizaciones en el futuro?
+
+Sí. Nuestra intención es que las próximas generaciones de aprendices **continúen mejorando y actualizando el sitio**, agregando nuevos recursos y experiencias para los que vendrán después.  
+*Necesary es un proyecto vivo, construido por estudiantes, para estudiantes.*
+
+##  Módulos principales
 
 El sitio se organiza en **cuatro módulos fundamentales** del programa Técnico en Sistemas:
 
@@ -36,19 +56,19 @@ El sitio se organiza en **cuatro módulos fundamentales** del programa Técnico 
 
 ---
 
-## 🖼️ Galería
+##  Galería
 
-📸 La sección de **Galería** muestra momentos importantes y experiencias vividas por los estudiantes durante la media técnica, reflejando el trabajo, la práctica y el aprendizaje colaborativo.
+ La sección de **Galería** muestra momentos importantes y experiencias vividas por los estudiantes durante la media técnica, reflejando el trabajo, la práctica y el aprendizaje colaborativo.
 
 ---
 
 ## ⚙️ Tecnologías utilizadas
 
-- ⚡ [Astro](https://astro.build/) — Framework de desarrollo estático  
-- 🧩 HTML5 — Estructura del contenido  
-- 🎨 CSS3 — Diseño y estilos visuales  
-- 💡 JavaScript (ES6) — Interactividad y lógica del cliente  
-- 🚀 [Vercel](https://vercel.com/) — Plataforma de despliegue gratuita  
+-  [Astro](https://astro.build/) — Framework de desarrollo estático  
+-  HTML5 — Estructura del contenido  
+-  CSS3 — Diseño y estilos visuales  
+-  JavaScript (ES6) — Interactividad y lógica del cliente  
+-  [Vercel](https://vercel.com/) — Plataforma de despliegue gratuita  
 
 ---
 
